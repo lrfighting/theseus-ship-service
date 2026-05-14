@@ -57,7 +57,8 @@ authRouter.get('/zhihu/login', (req, res) => {
 // ────────────────────────────────────────────────────────────
 
 authRouter.get('/zhihu/callback', async (req, res) => {
-  const code = req.query.code as string | undefined;
+  // 知乎文档写参数名是 code，但实际可能是 authorization_code，两个都兼容
+  const code = (req.query.code ?? req.query.authorization_code) as string | undefined;
   if (!code) {
     res.status(400).json({ error: { code: 'MISSING_CODE', message: '缺少 authorization_code' } });
     return;
