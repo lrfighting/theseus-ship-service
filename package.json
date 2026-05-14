@@ -16,7 +16,8 @@
     "typescript": "latest",
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.6",
-    "@types/node": "^25.7.0"
+    "@types/node": "^25.7.0",
+    "@types/cookie-parser": "^1.4.10"
   },
   "engines": {
     "node": ">=20.0.0"
