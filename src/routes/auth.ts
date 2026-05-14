@@ -17,6 +17,25 @@ import type { ZhihuUser } from '../services/session';
 const log = createLogger('route.auth');
 export const authRouter = Router();
 
+const isProduction = process.env.NODE_ENV === 'production';
+
+/** 跨域 cookie 配置：生产环境需要 sameSite='none' + secure */
+function cookieOpts(): {
+  httpOnly: boolean;
+  maxAge: number;
+  sameSite: 'none' | 'lax';
+  secure: boolean;
+  path: string;
+} {
+  return {
+    httpOnly: true,
+    maxAge: 1000 * 60 * 60 * 24 * 7, // 7 天
+    sameSite: isProduction ? 'none' : 'lax',
+    secure: isProduction,
+    path: '/',
+  };
+}
+
 // ────────────────────────────────────────────────────────────
 // 1. 引导用户到知乎授权页
 // ────────────────────────────────────────────────────────────
@@ -103,12 +122,7 @@ authRouter.get('/zhihu/callback', async (req, res) => {
 
     // 2.3 创建 session
     const sid = createSession(user);
-    res.cookie('sid', sid, {
-      httpOnly: true,
-      maxAge: 1000 * 60 * 60 * 24 * 7, // 7 天
-      sameSite: 'lax',
-      path: '/',
-    });
+    res.cookie('sid', sid, cookieOpts());
 
     // 2.4 跳回前端
     const clientUrl = req.query.state as string | undefined;
@@ -222,12 +236,7 @@ authRouter.post('/zhihu/exchange', async (req, res) => {
     };
 
     const sid = createSession(user);
-    res.cookie('sid', sid, {
-      httpOnly: true,
-      maxAge: 1000 * 60 * 60 * 24 * 7,
-      sameSite: 'lax',
-      path: '/',
-    });
+    res.cookie('sid', sid, cookieOpts());
 
     res.json({ data: user });
   } catch (err) {

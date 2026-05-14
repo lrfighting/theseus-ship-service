@@ -13,7 +13,12 @@ import { getAiProvider } from './services/ai';
 const log = createLogger('app');
 
 const app = express();
-app.use(cors({ origin: true, credentials: true }));
+
+// CORS：生产环境只允许前端域名，开发环境允许所有
+const corsOrigin = process.env.NODE_ENV === 'production'
+  ? (process.env.FRONTEND_URL || 'https://theseus-ship.onrender.com')
+  : true;
+app.use(cors({ origin: corsOrigin, credentials: true }));
 app.use(cookieParser());
 app.use(express.json({ limit: '4mb' }));
 

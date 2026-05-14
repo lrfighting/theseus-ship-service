@@ -22,5 +22,7 @@ services:
       - key: ZHIHU_APP_SECRET
         sync: false
       - key: ZHIHU_REDIRECT_URI
-        value: https://theseus-ship.onrender.com/api/auth/zhihu/callback
+        value: https://theseus-ship-service.onrender.com/api/auth/zhihu/callback
+      - key: FRONTEND_URL
+        value: https://theseus-ship.onrender.com
     healthCheckPath: /api/health
