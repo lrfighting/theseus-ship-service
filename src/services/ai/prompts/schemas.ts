@@ -87,7 +87,7 @@ export const SCHEMA_KEY_NODES = `
       "quote_hash": "string",
       "confidence": "number (0.0-1.0，你对该节点判断的置信度)",
       "branch_options": [
-        { "option_id": "string", "text": "string（选项描述，15-30字，体现不同价值观/风险偏好）", "tone": "string（走向风格，如：稳健、冲突升级、关系扩展、意外反转）" }
+        { "option_id": "string", "text": "string（选择标题——具体描述，标题5-12字体现价值观/风险偏好，描述20-40字补充行动细节，用'——'分隔，严禁重复原文）", "tone": "string（走向风格，如：稳健、冲突升级、关系扩展、意外反转）" }
       ]
     }
   ]
