@@ -19,7 +19,9 @@ services:
         sync: false
       - key: ZHIHU_APP_KEY
         sync: false
-      - key: ZHIHU_APP_SECRET
+      - key: ZHIHU_API_APP_KEY
+        sync: false
+      - key: ZHIHU_API_APP_SECRET
         sync: false
       - key: ZHIHU_REDIRECT_URI
         value: https://theseus-ship-service.onrender.com/api/auth/zhihu/callback

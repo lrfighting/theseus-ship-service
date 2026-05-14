@@ -24,9 +24,12 @@ export const config = {
   port: envNum('SERVER_PORT', 4000),
 
   zhihu: {
+    // OAuth 登录凭证
     appId: envStr('ZHIHU_APP_ID'),
     appKey: envStr('ZHIHU_APP_KEY'),
-    appSecret: envStr('ZHIHU_APP_SECRET'),
+    // 盐言故事开放接口凭证（可能与 OAuth 不是同一套）
+    apiAppKey: envStr('ZHIHU_API_APP_KEY', envStr('ZHIHU_APP_KEY')),
+    apiAppSecret: envStr('ZHIHU_API_APP_SECRET', envStr('ZHIHU_APP_SECRET')),
     baseUrl: envStr('ZHIHU_OPENAPI_BASE_URL', 'https://openapi.zhihu.com'),
     redirectUri: envStr('ZHIHU_REDIRECT_URI', `http://localhost:${envNum('SERVER_PORT', 4000)}/api/auth/zhihu/callback`),
   },

@@ -25,11 +25,11 @@ const USE_FIXTURE = (process.env.ZHIHU_USE_FIXTURE ?? '').trim() === '1';
 type ZhihuAuthHeaders = Record<string, string>;
 
 function createAuthHeaders(extraInfo = ''): ZhihuAuthHeaders {
-  const appKey = config.zhihu.appKey;
-  const appSecret = config.zhihu.appSecret;
+  const appKey = config.zhihu.apiAppKey;
+  const appSecret = config.zhihu.apiAppSecret;
   if (!appKey || !appSecret) {
     throw aiUpstream(
-      'Zhihu credentials missing: 请在 .env.local 中配置 ZHIHU_APP_KEY / ZHIHU_APP_SECRET',
+      'Zhihu API credentials missing: 请在环境变量中配置 ZHIHU_API_APP_KEY / ZHIHU_API_APP_SECRET',
     );
   }
 
