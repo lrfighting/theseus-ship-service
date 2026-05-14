@@ -38,8 +38,8 @@ export const config = {
     provider: (envStr('AI_PROVIDER', 'mock') as 'mock' | 'kimi'),
     kimi: {
       apiKey: envStr('KIMI_API_KEY'),
-      baseUrl: envStr('KIMI_BASE_URL', 'https://api.moonshot.cn/v1'),
-      model: envStr('KIMI_MODEL', 'kimi-k2-0905-preview'),
+      baseUrl: envStr('KIMI_BASE_URL', 'https://api.kimi.com/coding/v1'),
+      model: envStr('KIMI_MODEL', 'kimi-for-coding'),
       temperature: envNum('KIMI_TEMPERATURE', 0.7),
     },
   },
