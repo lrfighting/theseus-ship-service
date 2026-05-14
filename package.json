@@ -12,16 +12,16 @@
     "cookie-parser": "^1.4.7",
     "cors": "^2.8.6",
     "dotenv": "^17.4.2",
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "typescript": "latest",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.7.0"
   },
   "engines": {
     "node": ">=20.0.0"
   },
   "devDependencies": {
-    "@types/cors": "^2.8.19",
-    "@types/express": "^5.0.6",
-    "@types/node": "^25.7.0",
-    "tsx": "^4.21.0",
-    "typescript": "latest"
+    "tsx": "^4.21.0"
   }
 }
