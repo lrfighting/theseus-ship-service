@@ -1,14 +1,9 @@
 /**
- * Kimi (Moonshot AI / Kimi Code) Provider 实现。
+ * Moonshot (Kimi) Provider — OpenAI 兼容格式。
  *
- * 当前对接的是 Anthropic Messages API 兼容格式（Kimi Code 专用）：
- *   POST {base}/messages
- *   Headers: x-api-key, anthropic-version
- *   Body: { model, max_tokens, messages, temperature, stream }
- *
- * 流式响应为 SSE，事件类型按 Anthropic 规范：
- *   event: content_block_delta
- *   data: { type:"content_block_delta", delta:{ type:"text_delta", text:"..." } }
+ * 端点: POST {baseUrl}/chat/completions
+ * Headers: Authorization: Bearer {apiKey}
+ * Body:   { model, messages, temperature, stream }
  */
 
 import { config } from '../../config';
@@ -24,29 +19,26 @@ import type { ChatMessage } from './prompts/builders';
 
 const log = createLogger('ai.kimi');
 
-interface AnthropicContentBlock {
-  type: string;
-  text?: string;
-}
-
-interface AnthropicMessageResponse {
-  id: string;
-  type: string;
-  role: string;
-  model: string;
-  content: AnthropicContentBlock[];
-  stop_reason: string | null;
-  usage?: {
-    input_tokens: number;
-    output_tokens: number;
+interface OpenAIChoice {
+  message?: {
+    role: string;
+    content: string | null;
   };
+  delta?: {
+    role?: string;
+    content?: string | null;
+  };
+  finish_reason?: string | null;
 }
 
-interface AnthropicStreamEvent {
-  type: string;
-  delta?: {
-    type: string;
-    text?: string;
+interface OpenAIResponse {
+  id: string;
+  object: string;
+  model: string;
+  choices: OpenAIChoice[];
+  usage?: {
+    prompt_tokens: number;
+    completion_tokens: number;
   };
 }
 
@@ -60,36 +52,22 @@ async function callKimi(
     throw aiUpstream('KIMI_API_KEY is not configured');
   }
 
-  // Anthropic Messages API 要求 system prompt 放在顶级 system 字段，
-  // messages 数组中只能有 user / assistant 交替。
-  const systemTexts: string[] = [];
-  const apiMessages = messages
-    .filter((m) => {
-      if (m.role === 'system') {
-        systemTexts.push(m.content);
-        return false;
-      }
-      return true;
-    })
-    .map((m) => ({ role: m.role, content: m.content }));
-
   const body: Record<string, unknown> = {
     model: opts.model ?? kimi.model,
-    max_tokens: opts.max_tokens ?? 40960,
-    messages: apiMessages,
+    messages: messages.map((m) => ({ role: m.role, content: m.content })),
     temperature: opts.temperature ?? kimi.temperature,
-    ...(systemTexts.length ? { system: systemTexts.join('\n\n') } : {}),
+    max_tokens: opts.max_tokens ?? 40960,
+    ...(opts.json ? { response_format: { type: 'json_object' } } : {}),
     ...(stream ? { stream: true } : {}),
   };
 
   let resp: Response;
   try {
-    resp = await fetch(`${kimi.baseUrl}/messages`, {
+    resp = await fetch(`${kimi.baseUrl}/chat/completions`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'x-api-key': kimi.apiKey,
-        'anthropic-version': '2023-06-01',
+        Authorization: `Bearer ${kimi.apiKey}`,
       },
       body: JSON.stringify(body),
       signal: opts.signal,
@@ -101,7 +79,7 @@ async function callKimi(
 
   if (!resp.ok) {
     const text = await resp.text().catch(() => '');
-    log.warn(`Kimi non-2xx: ${resp.status} ${text}`);
+    log.warn(`Kimi non-2xx: ${resp.status} ${text.slice(0, 240)}`);
     let detail = text;
     try {
       const json = JSON.parse(text);
@@ -121,17 +99,13 @@ export const kimiProvider: StoryAIProvider = {
 
   async complete(messages, opts = {}): Promise<ChatCompletionResult> {
     const resp = await callKimi(messages, opts, false);
-    const data = (await resp.json()) as AnthropicMessageResponse;
-    const text = (data.content ?? [])
-      .filter((block) => block.type === 'text' && typeof block.text === 'string')
-      .map((block) => block.text ?? '')
-      .join('')
-      .trim();
+    const data = (await resp.json()) as OpenAIResponse;
+    const text = data.choices?.[0]?.message?.content ?? '';
     return {
       text,
       model: data.model,
-      prompt_tokens: data.usage?.input_tokens,
-      completion_tokens: data.usage?.output_tokens,
+      prompt_tokens: data.usage?.prompt_tokens,
+      completion_tokens: data.usage?.completion_tokens,
     };
   },
 
@@ -151,32 +125,21 @@ export const kimiProvider: StoryAIProvider = {
       const lines = buffer.split('\n');
       buffer = lines.pop() ?? '';
 
-      let currentEvent = '';
       for (const line of lines) {
         const trimmed = line.trim();
-        if (!trimmed) {
-          currentEvent = '';
-          continue;
-        }
-        if (trimmed.startsWith('event:')) {
-          currentEvent = trimmed.slice(6).trim();
-          continue;
+        if (!trimmed || trimmed.startsWith(':')) continue;
+        if (trimmed === 'data: [DONE]') {
+          yield { text: '', done: true };
+          return;
         }
         if (trimmed.startsWith('data:')) {
           const data = trimmed.slice(5).trim();
           if (!data) continue;
-          if (data === '[DONE]') {
-            yield { text: '', done: true };
-            return;
-          }
           try {
-            const event = JSON.parse(data) as AnthropicStreamEvent;
-            if (
-              currentEvent === 'content_block_delta' &&
-              event.type === 'content_block_delta' &&
-              event.delta?.text
-            ) {
-              yield { text: event.delta.text, done: false };
+            const event = JSON.parse(data) as OpenAIResponse;
+            const delta = event.choices?.[0]?.delta;
+            if (delta?.content) {
+              yield { text: delta.content, done: false };
             }
           } catch (err) {
             log.warn('Kimi: failed to parse SSE chunk', { data, err });
