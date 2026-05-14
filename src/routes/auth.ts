@@ -46,7 +46,7 @@ authRouter.get('/zhihu/login', (req, res) => {
   // state 用于回调后跳回前端（同时防 CSRF）
   const clientUrl = (req.query.redirect as string | undefined)
     || req.headers.referer
-    || 'http://localhost:5173/';
+    || (process.env.FRONTEND_URL || 'http://localhost:5173/');
   const state = encodeURIComponent(clientUrl);
   const authUrl = `https://openapi.zhihu.com/authorize?redirect_uri=${redirectUri}&app_id=${appId}&response_type=code&state=${state}`;
   res.redirect(authUrl);
@@ -127,7 +127,7 @@ authRouter.get('/zhihu/callback', async (req, res) => {
 
     // 2.4 跳回前端
     const clientUrl = req.query.state as string | undefined;
-    res.redirect(clientUrl || 'http://localhost:5173/');
+    res.redirect(clientUrl || (process.env.FRONTEND_URL || 'http://localhost:5173/'));
   } catch (err) {
     log.error('zhihu oauth callback error', err);
     res.status(500).json({ error: { code: 'OAUTH_ERROR', message: (err as Error).message } });
