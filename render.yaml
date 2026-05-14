@@ -27,4 +27,6 @@ services:
         value: https://theseus-ship-service.onrender.com/api/auth/zhihu/callback
       - key: FRONTEND_URL
         value: https://theseus-ship.onrender.com
+      - key: LOG_LEVEL
+        value: debug
     healthCheckPath: /api/health
