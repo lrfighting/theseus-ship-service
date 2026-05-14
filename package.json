@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "dev": "tsx watch --tsconfig ./tsconfig.json ./src/index.ts",
-    "build": "tsc -p ./tsconfig.json --outDir dist",
+    "build": "tsc -p ./tsconfig.build.json --outDir dist",
     "start": "node dist/src/index.js",
     "typecheck": "tsc -p ./tsconfig.json --noEmit"
   },
@@ -13,6 +13,9 @@
     "cors": "^2.8.6",
     "dotenv": "^17.4.2",
     "express": "^5.2.1"
+  },
+  "engines": {
+    "node": ">=20.0.0"
   },
   "devDependencies": {
     "@types/cors": "^2.8.19",

@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: theseus-ship-service
+    runtime: node
+    repo: https://github.com/lrfighting/theseus-ship-service
+    branch: main
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: SERVER_PORT
+        value: 10000
+      - key: AI_PROVIDER
+        value: kimi
+      - key: KIMI_API_KEY
+        sync: false
+      - key: ZHIHU_APP_ID
+        sync: false
+      - key: ZHIHU_APP_KEY
+        sync: false
+      - key: ZHIHU_APP_SECRET
+        sync: false
+      - key: ZHIHU_REDIRECT_URI
+        value: https://theseus-ship.onrender.com/api/auth/zhihu/callback
+    healthCheckPath: /api/health
