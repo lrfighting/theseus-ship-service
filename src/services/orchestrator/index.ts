@@ -148,66 +148,36 @@ function isMetaOrOutOfStoryOption(text: string, paragraph: string): boolean {
 }
 
 /**
- * 选项必须能从段落里「抠」出至少 2 个连续汉字作为锚（避免与节点原文无关）。
- * 跳过高频虚词双字，降低误匹配。
+ * 选项语义关联检查（宽松）：选项不应与段落完全无关。
+ * 不再强制要求连续字符匹配，改为拒绝明显的垃圾模板选项。
  */
-function optionAnchoredInParagraph(text: string, paragraph: string): boolean {
-  const p = paragraph.replace(/\s/g, '');
-  const stop2 = new Set([
-    '的是',
-    '的了',
-    '和在',
-    '也到',
-    '与或',
-    '就把',
-    '被让',
-    '着过',
-    '来说',
-    '这个',
-    '一个',
-    '他们',
-    '自己',
-    '已经',
-    '开始',
-    '起来',
-    '这样',
-    '什么',
-    '可以',
-    '没有',
-    '不是',
-    '就是',
-    '如果',
-  ]);
-  for (let len = 5; len >= 2; len--) {
-    for (let i = 0; i + len <= p.length; i++) {
-      const sub = p.slice(i, i + len);
-      if (!/^[\u4e00-\u9fff]+$/.test(sub)) continue;
-      if (len === 2 && stop2.has(sub)) continue;
-      if (text.includes(sub)) return true;
-    }
-  }
-  return false;
+function optionSemanticallyRelated(text: string, paragraph: string): boolean {
+  const t = text.replace(/\s/g, '');
+  // 拒绝包含"仍处在/语境/仍基于"等兜底模板词
+  if (/(仍处在|语境[:：]|仍基于)/.test(t)) return false;
+  return true;
 }
 
 function buildParagraphGroundedFallbackOptions(paragraph: string, node: KeyNode): BranchOption[] {
   const p = paragraph.replace(/\s/g, '');
-  const anchor = (node.anchor_text ?? '').trim().slice(0, 18) || p.slice(0, 18);
-  const clip = p.slice(0, 22);
+  const anchor = (node.anchor_text ?? '').trim().slice(0, 16) || p.slice(0, 16);
   const id = node.node_id;
+  // 基于节点标题生成主题化的兜底选项，避免"仍处在/语境/仍基于"等废话
+  const title = (node.title ?? '').trim() || '此处抉择';
   return [
     {
       option_id: `${id}_fb_1`,
-      text: `就「${anchor}」押上更大风险，立刻采取更激进的行动（仍处在：${clip}${p.length > 22 ? '…' : ''}）`,
+      text: `直面${title}——不再犹豫，以最直接的方式应对当前局面，哪怕代价巨大`,
       tone: '冲突升级',
     },
     {
       option_id: `${id}_fb_2`,
-      text: `围绕「${anchor}」先求稳：收缩风险、保护身边人，再寻找转机（语境：${clip}${p.length > 22 ? '…' : ''}）`,
+      text: `稳妥应对${title}——暂时退让保全自身，暗中观察形势变化，伺机而动`,
       tone: '稳健',
     },
     {
       option_id: `${id}_fb_3`,
-      text: `借「${anchor}」里的信息差，用非常规方式试探并改写当前走向（仍基于：${clip}${p.length > 22 ? '…' : ''}）`,
+      text: `另辟蹊径——跳出${title}的二元对立，用出乎意料的第三种方式打破僵局`,
       tone: '意外反转',
     },
   ];
@@ -225,7 +195,7 @@ function sanitizeBranchOptions(
     if (!text || text.length < 8) continue;
     if (isGenericOption(text)) continue;
     if (isMetaOrOutOfStoryOption(text, paragraph)) continue;
-    if (!optionAnchoredInParagraph(text, paragraph)) continue;
+    if (!optionSemanticallyRelated(text, paragraph)) continue;
     if (uniq.has(text)) continue;
     uniq.add(text);
     cleaned.push({
@@ -285,14 +255,25 @@ function isAcceptableKeyNodeParagraph(text: string): boolean {
 /** 宽松：用于「宁可要节点也不要空白」时的最低门槛（仍排除极短段） */
 function isAcceptableKeyNodeParagraphRelaxed(text: string): boolean {
   const t = text.trim();
-  if (t.length < 14) return false;
+  if (t.length < 20) return false;
   if (isAcceptableKeyNodeParagraph(t)) return true;
-  if (/[？?！!]/.test(t)) return true;
-  if (/(心想|暗想|心里|不禁|不由得|忽然|猛地)/.test(t)) return true;
-  if (/[「」]/.test(t)) return true;
-  if (/(说道|问道|喊道|低声|回答|叹气)/.test(t)) return true;
-  if (t.length >= 32 && /(我|你|他|她|咱|咱们)/.test(t)) return true;
-  return false;
+
+  // 排除纯信息交代 / 日常琐事 / 背景铺陈
+  const pureInfoPattern = /^(那年|小时候|从前|据说|相传|自古|一直以来|众所周知|阿娘|娘亲|母亲|父亲|爹爹)[:,，。]/;
+  if (pureInfoPattern.test(t)) return false;
+  if (/(做得一手好|擅长|从小|自幼|家传|祖传|据说|相传|传说|很久以前)/.test(t) && !/(犹豫|抉择|决定|选择|要不要|突然|没想到|如果|对峙|威胁|揭露|真相)/.test(t)) {
+    return false;
+  }
+
+  // 这些信号单独不足以成为节点，需要组合判断
+  let weakSignals = 0;
+  if (/[？?！!]/.test(t)) weakSignals++;
+  if (/(心想|暗想|心里|不禁|不由得|忽然|猛地)/.test(t)) weakSignals++;
+  if (/(说道|问道|喊道|低声|回答|叹气|冷笑|怒道)/.test(t)) weakSignals++;
+  if (/(只能|不得不|必须|再不|立刻|再也|要么|还是|或者|是否)/.test(t)) weakSignals++;
+
+  // 需要至少2个弱信号才通过宽松门槛
+  return weakSignals >= 2;
 }
 
 function paragraphWeakArrivalOnly(text: string): boolean {
@@ -328,7 +309,7 @@ function scoreKeyNode(
   if (/^\d+$/.test(node.title.trim())) score -= 2.5;
 
   if (isAcceptableKeyNodeParagraph(paragraphText)) score += 3.2;
-  else score += 0.35;
+  else score -= 1.5; // 弱段落大幅扣分，优先选择真正的转折点
 
   if (paragraphWeakArrivalOnly(paragraphText)) score -= 4.5;
 
