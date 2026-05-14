@@ -126,6 +126,20 @@ backgroundRouter.post('/all/stream', async (req, res) => {
   });
 
   let readyCount = 0;
+
+  // SSE 心跳：每 10 秒发一次 status，防止 Render 等代理超时切断连接
+  const heartbeat = setInterval(() => {
+    if (sender.closed()) {
+      clearInterval(heartbeat);
+      return;
+    }
+    sender.status({
+      status: 'queued',
+      upstream_ready: readyCount,
+      upstream_total: taskList.length,
+    });
+  }, 10000);
+
   await Promise.all(
     taskList.map(async (taskType) => {
       try {
@@ -182,6 +196,7 @@ backgroundRouter.post('/all/stream', async (req, res) => {
     }),
   );
 
+  clearInterval(heartbeat);
   sender.final(bundle);
   sender.done();
 });
