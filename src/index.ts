@@ -3,6 +3,7 @@ import cors from 'cors';
 import cookieParser from 'cookie-parser';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { existsSync } from 'fs';
 import { config } from './config';
 import { createLogger } from './utils/logger';
 import { apiRouter } from './routes';
@@ -18,15 +19,15 @@ app.use(express.json({ limit: '4mb' }));
 
 app.use('/api', apiRouter);
 
-// 生产环境：服务前端静态文件
+// 生产环境：服务前端静态文件（需先将前端 build 产物放入 backend/dist/）
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const distPath = path.resolve(__dirname, '../../../dist');
-app.use(express.static(distPath));
-
-// SPA fallback：所有非 API 路由返回 index.html
-app.use((_req, res) => {
-  res.sendFile(path.join(distPath, 'index.html'));
-});
+const distPath = path.resolve(__dirname, '../dist');
+if (existsSync(distPath)) {
+  app.use(express.static(distPath));
+  app.use((_req, res) => {
+    res.sendFile(path.join(distPath, 'index.html'));
+  });
+}
 
 // 兜底错误处理
 app.use((err: unknown, _req: express.Request, res: express.Response, _next: express.NextFunction) => {
