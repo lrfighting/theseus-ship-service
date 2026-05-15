@@ -1,0 +1,35 @@
+{
+  "cache_key": "ai_relations_1748658750670757888_09a800f4a04387f240c7eae061e09cddbb76d27d767326b7bb74d7a5b8ae532d_v1_kimi-for-coding",
+  "work_id": "1748658750670757888",
+  "content_hash": "09a800f4a04387f240c7eae061e09cddbb76d27d767326b7bb74d7a5b8ae532d",
+  "task_type": "relations",
+  "prompt_version": "v1",
+  "model": "kimi-for-coding",
+  "data": {
+    "relations": [
+      {
+        "from": "c001",
+        "to": "c002",
+        "relation": "丈夫与死去妻子／悲情符号的使用者与被使用者",
+        "intensity": "high",
+        "description": "这段关系的真实面目是整个故事最大的反转：朱小贞以为她和林生斌是相爱的夫妻，而林生斌在她死前就已经有了二房。她的死成为了他的商业起点，她的名字成为了他的保护盾。脆弱点：朱小贞的哥哥朱庆丰一直是戳破这个叙事最危险的人"
+      },
+      {
+        "from": "c001",
+        "to": "c003",
+        "relation": "雇主与「养虎为患」的保姆",
+        "intensity": "high",
+        "description": "表面是受害者与加害者，实质是林生斌在此后叙事中将莫焕晶「充分利用」了——莫焕晶越坏，林生斌越值得同情。两个人在公众叙事中形成了一种奇异的共生：莫焕晶的罪行越大，林生斌的人设越稳固"
+      },
+      {
+        "from": "c002",
+        "to": "c003",
+        "relation": "善意的朱小贞与背叛她的保姆",
+        "intensity": "high",
+        "description": "朱小贞把莫焕晶当家人，甚至带她出游；莫焕晶把这份信任转化为了借钱的资本，最终因贪婪和慌乱造成了无法挽回的后果"
+      }
+    ]
+  },
+  "generated_at": 1747267200000,
+  "cdn_synced_at": null
+}

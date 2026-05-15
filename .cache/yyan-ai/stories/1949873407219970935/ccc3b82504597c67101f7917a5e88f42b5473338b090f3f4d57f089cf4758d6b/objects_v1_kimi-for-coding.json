@@ -1,0 +1,38 @@
+{
+  "cache_key": "ai_objects_1949873407219970935_ccc3b82504597c67101f7917a5e88f42b5473338b090f3f4d57f089cf4758d6b_v1_kimi-for-coding",
+  "work_id": "1949873407219970935",
+  "content_hash": "ccc3b82504597c67101f7917a5e88f42b5473338b090f3f4d57f089cf4758d6b",
+  "task_type": "objects",
+  "prompt_version": "v1",
+  "model": "kimi-for-coding",
+  "data": {
+    "objects": [
+      {
+        "object_id": "o001",
+        "name": "《湘水以西地域剿匪计划大纲》",
+        "type": "蒋介石的圈套文件",
+        "description": "蒋介石预设的圈套，明确规定一旦红军进入湘西便「各军即相机堵巢」",
+        "current_owner": "c002",
+        "story_role": "毛泽东能「预判蒋介石的预判」的证据就是推断出这类文件的存在。这份文件的存在证明了去湘西就是自投罗网"
+      },
+      {
+        "object_id": "o002",
+        "name": "赤水河",
+        "type": "战略转折的地理象征",
+        "description": "流经云贵川三省交界的大河，红军在此四次渡河。每一渡都是一次战略方向的重新选择",
+        "current_owner": null,
+        "story_role": "四渡赤水从被动突围演变为主动战略欺骗的完整过程，是整个长征战略智慧的最高峰。「赤水河」三个字本身就是这段历史的核心象征"
+      },
+      {
+        "object_id": "o003",
+        "name": "遵义会议决议",
+        "type": "权力更迭的历史文件",
+        "description": "1935年1月遵义会议通过的决议，毛泽东成为政治局常委，结束了李德博古的错误路线",
+        "current_owner": "c001",
+        "story_role": "这是整个长征最重要的「命运拐点文件」——不是军事胜利，而是一次政治会议，决定了数十万人的命运走向"
+      }
+    ]
+  },
+  "generated_at": 1747267200000,
+  "cdn_synced_at": null
+}

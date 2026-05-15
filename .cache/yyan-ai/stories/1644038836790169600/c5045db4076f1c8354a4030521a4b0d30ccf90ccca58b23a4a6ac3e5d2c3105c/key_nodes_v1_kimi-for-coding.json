@@ -1,0 +1,110 @@
+{
+  "cache_key": "ai_key_nodes_1644038836790169600_c5045db4076f1c8354a4030521a4b0d30ccf90ccca58b23a4a6ac3e5d2c3105c_v1_kimi-for-coding",
+  "work_id": "1644038836790169600",
+  "content_hash": "c5045db4076f1c8354a4030521a4b0d30ccf90ccca58b23a4a6ac3e5d2c3105c",
+  "task_type": "key_nodes",
+  "prompt_version": "v1",
+  "model": "kimi-for-coding",
+  "data": {
+    "key_nodes": [
+      {
+        "node_id": "kn001",
+        "title": "真相之书",
+        "summary": "始皇第一次从历史书中看到大秦二世而亡、扶苏含冤自杀的真相，帝国命运从此存在被改写的可能性",
+        "importance": "main",
+        "node_type": "revelation",
+        "source": "original",
+        "depth": 0,
+        "parent_branch_id": null,
+        "paragraph_index": 8,
+        "char_range": [1200, 1380],
+        "anchor_text": "「我大秦二世就亡了？」秦始皇脸色铁青，一双鹰眸中隐含怒意",
+        "quote_hash": "qh_1644_001",
+        "confidence": 0.97,
+        "branch_options": [
+          {
+            "option_id": "kn001_a",
+            "text": "始皇雷霆震怒——当场将书中叛臣名字悉数记下，立即启动秘密清洗，不给李斯赵高任何喘息机会",
+            "tone": "冲突升级"
+          },
+          {
+            "option_id": "kn001_b",
+            "text": "始皇隐忍不发——合上书页面色如常，暗中布局，以帝王最擅长的沉默等待最致命的反击时机",
+            "tone": "稳健"
+          },
+          {
+            "option_id": "kn001_c",
+            "text": "始皇问起扶苏——抛开帝王威严，第一次直接开口：扶苏，他真的值得朕将这个帝国交给他吗",
+            "tone": "关系扩展"
+          }
+        ]
+      },
+      {
+        "node_id": "kn002",
+        "title": "李斯密室召见",
+        "summary": "始皇知晓背叛真相后单独召见李斯，这是一次将决定李斯命运走向的密室对话，也是穿越者去留的分水岭",
+        "importance": "main",
+        "node_type": "turning_point",
+        "source": "original",
+        "depth": 0,
+        "parent_branch_id": null,
+        "paragraph_index": 12,
+        "char_range": [1850, 1970],
+        "anchor_text": "「有劳周先生，将李斯叫进来，朕要跟他单独谈谈」",
+        "quote_hash": "qh_1644_002",
+        "confidence": 0.95,
+        "branch_options": [
+          {
+            "option_id": "kn002_a",
+            "text": "暗中留守监听——拒绝完全退出，借助系统道具偷听密室内容，提前掌握始皇对李斯的处置方向",
+            "tone": "冲突升级"
+          },
+          {
+            "option_id": "kn002_b",
+            "text": "遵命离开等待——相信始皇有自己的帝王手段，但内心埋下「李斯是否会反咬自己」的长期隐患",
+            "tone": "稳健"
+          },
+          {
+            "option_id": "kn002_c",
+            "text": "离开前投去一眼——向李斯投出意味深长的眼神，让他意识到始皇已知晓某些事，彻底打乱他的心理防线",
+            "tone": "意外反转"
+          }
+        ]
+      },
+      {
+        "node_id": "kn003",
+        "title": "穿越者的第一次抉择",
+        "summary": "始皇追问大秦是否开创了万世之基，穿越者面临第一次在自保与历史真相之间的命运抉择",
+        "importance": "main",
+        "node_type": "conflict",
+        "source": "original",
+        "depth": 0,
+        "parent_branch_id": null,
+        "paragraph_index": 6,
+        "char_range": [820, 980],
+        "anchor_text": "「对了，既然你刚刚说，你是从后世穿越而来。那朕问你，在后世，我大秦可开创了万世之基？」",
+        "quote_hash": "qh_1644_003",
+        "confidence": 0.93,
+        "branch_options": [
+          {
+            "option_id": "kn003_a",
+            "text": "直言真相——拿出历史书，用事实代替安慰，冒着触怒龙颜的风险换取始皇最彻底的信任",
+            "tone": "冲突升级"
+          },
+          {
+            "option_id": "kn003_b",
+            "text": "迂回缓冲——先从系统兑换外交道具，为说出真相找到一个不会当场丧命的铺垫方式",
+            "tone": "稳健"
+          },
+          {
+            "option_id": "kn003_c",
+            "text": "反问始皇——「陛下觉得您的帝国还差什么？」把问题抛回去，用始皇自己的答案打开改变历史的对话",
+            "tone": "意外反转"
+          }
+        ]
+      }
+    ]
+  },
+  "generated_at": 1747267200000,
+  "cdn_synced_at": null
+}

@@ -1,0 +1,35 @@
+{
+  "cache_key": "ai_relations_2005022453466939621_96d1c05f5e6c8c8528ee51859ca0463291691cdca2aa459227ecef56600427f6_v1_kimi-for-coding",
+  "work_id": "2005022453466939621",
+  "content_hash": "96d1c05f5e6c8c8528ee51859ca0463291691cdca2aa459227ecef56600427f6",
+  "task_type": "relations",
+  "prompt_version": "v1",
+  "model": "kimi-for-coding",
+  "data": {
+    "relations": [
+      {
+        "from": "c002",
+        "to": "c003",
+        "relation": "婆媳／潜在敌对关系",
+        "intensity": "high",
+        "description": "婆婆阴性结果出来后立刻指责媳妇，而媳妇没有进自证陷阱，立刻反击「你管好你儿子」——这说明这段婆媳关系早已不是第一次剑拔弩张。脆弱点：溯源结果将决定谁在道德上拥有更高地位，在那之前每个人都在抢占舆论制高点"
+      },
+      {
+        "from": "c001",
+        "to": "c002",
+        "relation": "医生与拥有关键信息的病患",
+        "intensity": "mid",
+        "description": "医生的专业问询打开了孩子妈妈的话匣子。她说「只有我老公」之后又透露了丈夫去西安的信息，这种信息的逐步释放说明她在评估医生值不值得信任"
+      },
+      {
+        "from": "c003",
+        "to": "c004",
+        "relation": "同在一条船的夫妻，立场却有分歧",
+        "intensity": "mid",
+        "description": "婆婆急于指责，公公却提出要用科学方法溯源。这对夫妻在危机面前的不同反应，折射出他们处理问题的根本差异——一个想打倒对手，一个想搞清楚真相"
+      }
+    ]
+  },
+  "generated_at": 1747267200000,
+  "cdn_synced_at": null
+}

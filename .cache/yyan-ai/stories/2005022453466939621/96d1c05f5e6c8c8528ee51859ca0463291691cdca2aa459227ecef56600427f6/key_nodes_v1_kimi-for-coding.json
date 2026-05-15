@@ -1,0 +1,110 @@
+{
+  "cache_key": "ai_key_nodes_2005022453466939621_96d1c05f5e6c8c8528ee51859ca0463291691cdca2aa459227ecef56600427f6_v1_kimi-for-coding",
+  "work_id": "2005022453466939621",
+  "content_hash": "96d1c05f5e6c8c8528ee51859ca0463291691cdca2aa459227ecef56600427f6",
+  "task_type": "key_nodes",
+  "prompt_version": "v1",
+  "model": "kimi-for-coding",
+  "data": {
+    "key_nodes": [
+      {
+        "node_id": "kn001",
+        "title": "父母双阳确认时刻",
+        "summary": "父母同时被确认HIV阳性，婆婆当场指责媳妇，媳妇反击，公公提出溯源——家庭关系在这一刻全面进入战争状态",
+        "importance": "main",
+        "node_type": "turning_point",
+        "source": "original",
+        "depth": 0,
+        "parent_branch_id": null,
+        "paragraph_index": 8,
+        "char_range": [780, 950],
+        "anchor_text": "婆婆得知自己是阴性后，立马颐指气使地说肯定是媳妇有问题",
+        "quote_hash": "qh_2005_001",
+        "confidence": 0.97,
+        "branch_options": [
+          {
+            "option_id": "kn001_a",
+            "text": "医生介入调停——在争吵失控前明确告知：在溯源结果出来之前，任何指控都没有依据，把所有人的注意力拉回到孩子的治疗上",
+            "tone": "稳健"
+          },
+          {
+            "option_id": "kn001_b",
+            "text": "单独带走孩子爸爸问询——打破家庭整体防御阵线，趁婆媳争吵时私下与父亲建立单独对话",
+            "tone": "意外反转"
+          },
+          {
+            "option_id": "kn001_c",
+            "text": "直接宣布溯源流程——以程序性语言切断情绪化争吵，告知家庭：科学会给出答案，现在的争吵没有意义",
+            "tone": "冲突升级"
+          }
+        ]
+      },
+      {
+        "node_id": "kn002",
+        "title": "孩子拷贝数异常之谜",
+        "summary": "孩子的病毒拷贝数是父母的七八倍，这个反常数据打破了所有人对「谁传染给谁」的直觉判断",
+        "importance": "main",
+        "node_type": "revelation",
+        "source": "original",
+        "depth": 0,
+        "parent_branch_id": null,
+        "paragraph_index": 6,
+        "char_range": [580, 680],
+        "anchor_text": "孩子的拷贝数是父母的七八倍。怎么会这样？难道是小孩子传染给父母的？",
+        "quote_hash": "qh_2005_002",
+        "confidence": 0.95,
+        "branch_options": [
+          {
+            "option_id": "kn002_a",
+            "text": "立刻向家属解释拷贝数的医学含义——先用科学知识阻止错误判断扩散，再引导家属理性等待溯源",
+            "tone": "稳健"
+          },
+          {
+            "option_id": "kn002_b",
+            "text": "向实习生解释同时追加询问——用教学场景作掩护，在家属面前演示推理过程，观察谁的反应最不自然",
+            "tone": "意外反转"
+          },
+          {
+            "option_id": "kn002_c",
+            "text": "追问孩子出生后的完整就医记录——高拷贝数可能意味着感染时间很早，这条线索指向一个谁都没有预料到的方向",
+            "tone": "冲突升级"
+          }
+        ]
+      },
+      {
+        "node_id": "kn003",
+        "title": "医生单独问询孩子妈妈",
+        "summary": "医生打发父亲去办住院，单独问询妈妈性生活史，妈妈说「只有我老公」并透露「他还去了西安」",
+        "importance": "main",
+        "node_type": "revelation",
+        "source": "original",
+        "depth": 0,
+        "parent_branch_id": null,
+        "paragraph_index": 12,
+        "char_range": [1180, 1300],
+        "anchor_text": "「不用问了，肯定是他在外面乱搞，他还去了西安——」",
+        "quote_hash": "qh_2005_003",
+        "confidence": 0.96,
+        "branch_options": [
+          {
+            "option_id": "kn003_a",
+            "text": "追问西安之行的细节——这个信息打开了新的溯源方向，可能是整个家庭秘密的真正入口",
+            "tone": "冲突升级"
+          },
+          {
+            "option_id": "kn003_b",
+            "text": "保持沉默继续记录——不追问，让妈妈在感受到被接受的安全感中继续开口",
+            "tone": "稳健"
+          },
+          {
+            "option_id": "kn003_c",
+            "text": "告诉妈妈溯源结果会出来——让她知道无论如何隐瞒或揭露，科学都会给出一个客观答案，减少她的心理防御",
+            "tone": "意外反转"
+          }
+        ]
+      }
+    ]
+  },
+  "generated_at": 1747267200000,
+  "cdn_synced_at": null
+}

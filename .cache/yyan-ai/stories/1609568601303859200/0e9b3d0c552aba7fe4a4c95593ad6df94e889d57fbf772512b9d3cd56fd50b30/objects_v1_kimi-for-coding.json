@@ -1,0 +1,46 @@
+{
+  "cache_key": "ai_objects_1609568601303859200_0e9b3d0c552aba7fe4a4c95593ad6df94e889d57fbf772512b9d3cd56fd50b30_v1_kimi-for-coding",
+  "work_id": "1609568601303859200",
+  "content_hash": "0e9b3d0c552aba7fe4a4c95593ad6df94e889d57fbf772512b9d3cd56fd50b30",
+  "task_type": "objects",
+  "prompt_version": "v1",
+  "model": "kimi-for-coding",
+  "data": {
+    "objects": [
+      {
+        "object_id": "o001",
+        "name": "五仁月饼馅",
+        "type": "命运象征物",
+        "description": "妹妹啃完皮只剩的月饼馅被妈妈作为「好东西」推给燕子。燕子拒绝了，后来在猪食桶里找到了那坨馅——妈妈自己也没有吃",
+        "current_owner": "c002",
+        "story_role": "故事标题「夹心饼干」的核心意象，是燕子在家庭中地位的最精准隐喻：看似是内核，实则是被嫌弃的残余"
+      },
+      {
+        "object_id": "o002",
+        "name": "煲仔饭与橘子汽水",
+        "type": "温情记忆载体",
+        "description": "大伯带燕子在比赛当天吃的一顿饭，帮她浇好汤汁，拿了汽水。燕子以前从来没有人这样细心对待过她",
+        "current_owner": "c001",
+        "story_role": "燕子一生中被郑重对待的第一个具体记忆，代表着家庭之外还存在另一种可能性"
+      },
+      {
+        "object_id": "o003",
+        "name": "奖状",
+        "type": "被否定的努力证明",
+        "description": "燕子朗诵比赛获得的二等奖奖状，贴在墙上一年多，后来掉落，和其他奖状一起被当成「火引子」烧掉",
+        "current_owner": "c001",
+        "story_role": "燕子所有努力的命运缩影：被看见，然后被毁掉，从不被珍惜"
+      },
+      {
+        "object_id": "o004",
+        "name": "结婚的喜糖",
+        "type": "悲剧见证物",
+        "description": "英子继母塞给燕子的一把喜糖，燕子一颗也没吃，回家后被妹妹翻走了",
+        "current_owner": "c004",
+        "story_role": "英子命运终结的具象物证。糖的喜庆与场景的悲剧形成极度割裂，是整个故事最触目惊心的反讽"
+      }
+    ]
+  },
+  "generated_at": 1747267200000,
+  "cdn_synced_at": null
+}

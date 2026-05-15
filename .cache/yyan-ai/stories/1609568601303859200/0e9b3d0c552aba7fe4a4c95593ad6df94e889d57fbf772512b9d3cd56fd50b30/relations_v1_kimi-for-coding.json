@@ -1,0 +1,35 @@
+{
+  "cache_key": "ai_relations_1609568601303859200_0e9b3d0c552aba7fe4a4c95593ad6df94e889d57fbf772512b9d3cd56fd50b30_v1_kimi-for-coding",
+  "work_id": "1609568601303859200",
+  "content_hash": "0e9b3d0c552aba7fe4a4c95593ad6df94e889d57fbf772512b9d3cd56fd50b30",
+  "task_type": "relations",
+  "prompt_version": "v1",
+  "model": "kimi-for-coding",
+  "data": {
+    "relations": [
+      {
+        "from": "c001",
+        "to": "c002",
+        "relation": "女儿与无意识偏心的母亲",
+        "intensity": "high",
+        "description": "燕子对妈妈的情感是极度矛盾的混合体：有爱，有渴望被认可，有受伤后的愤怒，有理解后的和解冲动。脆弱点：「你考上有什么用，你又不是你哥」这句话彻底暴露了这段关系的核心伤口——妈妈的偏心不是偶发，而是结构性的"
+      },
+      {
+        "from": "c001",
+        "to": "c003",
+        "relation": "被看见的孩子与第一个认真对待她的成年人",
+        "intensity": "mid",
+        "description": "大伯对燕子来说是异常珍贵的存在——第一个当众为她鼓掌、认真告诉她「你比你哥哥聪明」的人。他给的十块钱和煲仔饭在燕子心里的分量，远超那些从未被兑现的家庭承诺"
+      },
+      {
+        "from": "c001",
+        "to": "c004",
+        "relation": "命运镜像中的两面",
+        "intensity": "high",
+        "description": "英子是燕子的平行命运——如果燕子不做什么，她将成为下一个英子。那句「你一定不要像我这样」是整个故事最锋利的命运警告，也是驱动燕子最终站起来的情感炸药"
+      }
+    ]
+  },
+  "generated_at": 1747267200000,
+  "cdn_synced_at": null
+}

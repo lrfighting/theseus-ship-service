@@ -1,0 +1,110 @@
+{
+  "cache_key": "ai_key_nodes_1622619372492722176_67c9f9c4cf98fec9b475387513fd1d3c3f5445772abbbd344e9e4977c6efaa98_v1_kimi-for-coding",
+  "work_id": "1622619372492722176",
+  "content_hash": "67c9f9c4cf98fec9b475387513fd1d3c3f5445772abbbd344e9e4977c6efaa98",
+  "task_type": "key_nodes",
+  "prompt_version": "v1",
+  "model": "kimi-for-coding",
+  "data": {
+    "key_nodes": [
+      {
+        "node_id": "kn001",
+        "title": "师父最后的清醒",
+        "summary": "进雷音寺前，师父发出「诸佛早已堕入魔道，为师也快了」的警告，这是他神识最后清醒时发出的求救",
+        "importance": "main",
+        "node_type": "revelation",
+        "source": "original",
+        "depth": 0,
+        "parent_branch_id": null,
+        "paragraph_index": 3,
+        "char_range": [220, 380],
+        "anchor_text": "「诸佛早已堕入魔道，为师也快了。」「我的话也不能完全相信。」",
+        "quote_hash": "qh_1622_001",
+        "confidence": 0.98,
+        "branch_options": [
+          {
+            "option_id": "kn001_a",
+            "text": "拉住师父追问——在进门前抓住最后的清醒窗口，追问「如何才能保住我们的神识不被魔化」",
+            "tone": "冲突升级"
+          },
+          {
+            "option_id": "kn001_b",
+            "text": "悄悄告诉二师兄——在师父的警告里找到最关键的信息：「该吃的不能吃」，只把这一条守住",
+            "tone": "稳健"
+          },
+          {
+            "option_id": "kn001_c",
+            "text": "观察大师兄的反应——借师父的警告，注意大师兄是否表现出任何异常的平静，以此判断他的身份",
+            "tone": "意外反转"
+          }
+        ]
+      },
+      {
+        "node_id": "kn002",
+        "title": "八戒的秘密",
+        "summary": "八戒在僻静处向小白龙揭露西游真相：取经是天庭与灵山的博弈，大师兄可能已被替换，他自己也已入魔",
+        "importance": "main",
+        "node_type": "revelation",
+        "source": "original",
+        "depth": 0,
+        "parent_branch_id": null,
+        "paragraph_index": 18,
+        "char_range": [2100, 2300],
+        "anchor_text": "「小白龙，你可知这西游背后的真相是什么？」",
+        "quote_hash": "qh_1622_002",
+        "confidence": 0.97,
+        "branch_options": [
+          {
+            "option_id": "kn002_a",
+            "text": "追问大师兄的下落——比逃跑更重要的是确认：如果真正的悟空还在，他在哪里？找到他才是反转的关键",
+            "tone": "关系扩展"
+          },
+          {
+            "option_id": "kn002_b",
+            "text": "接过九齿钉耙立刻规划逃路——八戒给的时间极短，把情报整理放在后面，先确定逃离路线",
+            "tone": "稳健"
+          },
+          {
+            "option_id": "kn002_c",
+            "text": "向八戒提出一个问题：能否利用魔化状态反制灵山——既然入魔无法逆转，不如把它变成武器",
+            "tone": "意外反转"
+          }
+        ]
+      },
+      {
+        "node_id": "kn003",
+        "title": "斋饭厅的生死一瞬",
+        "summary": "斋饭中的血肉即将被强塞入口，八戒帮小白龙虚与委蛇完成了掩护，但其他人的处境未知",
+        "importance": "main",
+        "node_type": "turning_point",
+        "source": "original",
+        "depth": 0,
+        "parent_branch_id": null,
+        "paragraph_index": 13,
+        "char_range": [1480, 1620],
+        "anchor_text": "「别动，咬一块肉含在嘴里，别咽下去。」",
+        "quote_hash": "qh_1622_003",
+        "confidence": 0.96,
+        "branch_options": [
+          {
+            "option_id": "kn003_a",
+            "text": "暗中阻止师父进食——在斋宴混乱中设法让师父不吃下任何东西，哪怕只保住他一个人的神识",
+            "tone": "冲突升级"
+          },
+          {
+            "option_id": "kn003_b",
+            "text": "配合八戒的掩护离场——跟着八戒走出去，获取更多信息后再做决策，优先保全自己",
+            "tone": "稳健"
+          },
+          {
+            "option_id": "kn003_c",
+            "text": "偷偷观察「大师兄」是否也在进食——用他的行为判断他的真实身份和立场",
+            "tone": "意外反转"
+          }
+        ]
+      }
+    ]
+  },
+  "generated_at": 1747267200000,
+  "cdn_synced_at": null
+}

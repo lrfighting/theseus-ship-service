@@ -1,0 +1,110 @@
+{
+  "cache_key": "ai_key_nodes_1748658750670757888_09a800f4a04387f240c7eae061e09cddbb76d27d767326b7bb74d7a5b8ae532d_v1_kimi-for-coding",
+  "work_id": "1748658750670757888",
+  "content_hash": "09a800f4a04387f240c7eae061e09cddbb76d27d767326b7bb74d7a5b8ae532d",
+  "task_type": "key_nodes",
+  "prompt_version": "v1",
+  "model": "kimi-for-coding",
+  "data": {
+    "key_nodes": [
+      {
+        "node_id": "kn001",
+        "title": "火灾次日建立微博",
+        "summary": "林生斌在四位至亲罹难次日，建立了「老婆孩子在天堂」微博账号——这是整个故事最早、也最关键的异常信号",
+        "importance": "main",
+        "node_type": "plot_hook",
+        "source": "original",
+        "depth": 0,
+        "parent_branch_id": null,
+        "paragraph_index": 5,
+        "char_range": [450, 580],
+        "anchor_text": "可谁都没注意到，这条微博的发布时间是在火灾的第二天",
+        "quote_hash": "qh_1748_001",
+        "confidence": 0.97,
+        "branch_options": [
+          {
+            "option_id": "kn001_a",
+            "text": "早期质疑者追问发布时间——在2017年就追问这个异常信号，而不是等四年后真相浮现",
+            "tone": "冲突升级"
+          },
+          {
+            "option_id": "kn001_b",
+            "text": "选择相信善意解读——把「次日建立微博」理解为一种特殊的哀悼方式，给予充分的善意",
+            "tone": "稳健"
+          },
+          {
+            "option_id": "kn001_c",
+            "text": "关注朱小贞家人的态度——哥哥朱庆丰的沉默或发声，才是最真实的信号",
+            "tone": "意外反转"
+          }
+        ]
+      },
+      {
+        "node_id": "kn002",
+        "title": "莫焕晶被执行死刑后的转折",
+        "summary": "2018年6月，莫焕晶被确定执行死刑。林生斌的舆论保护期在法律意义上画上句号，他开始踏上「求佛路」，并逐渐淡出悼念内容",
+        "importance": "main",
+        "node_type": "turning_point",
+        "source": "original",
+        "depth": 0,
+        "parent_branch_id": null,
+        "paragraph_index": 12,
+        "char_range": [1180, 1300],
+        "anchor_text": "2018 年 6 月，案发整整一年，死刑复核书终于送达，莫焕晶被确定执行死刑",
+        "quote_hash": "qh_1748_002",
+        "confidence": 0.94,
+        "branch_options": [
+          {
+            "option_id": "kn002_a",
+            "text": "网友此时开始深挖「兄弟堂」——六芒星标志、成功男人圈子、越野拉力，任何一条线索都可能在这时提前牵出真相",
+            "tone": "冲突升级"
+          },
+          {
+            "option_id": "kn002_b",
+            "text": "此时林生斌选择低调退出公众视野——如果他在执行后真正停止经营，这段故事会如何收尾",
+            "tone": "稳健"
+          },
+          {
+            "option_id": "kn002_c",
+            "text": "朱小贞的家人公开质疑——在莫焕晶被执行后，朱小贞的哥哥选择在此时发声，这将是整个叙事逆转的起爆点",
+            "tone": "意外反转"
+          }
+        ]
+      },
+      {
+        "node_id": "kn003",
+        "title": "改名「林生斌」",
+        "summary": "2020年7月，林生斌将微博名从「老婆孩子在天堂」改为「林生斌」，解释说「人生是一条单行道，大家该向前看了」",
+        "importance": "main",
+        "node_type": "turning_point",
+        "source": "original",
+        "depth": 0,
+        "parent_branch_id": null,
+        "paragraph_index": 15,
+        "char_range": [1480, 1580],
+        "anchor_text": "「人生是一条单行道，大家该向前看了。」",
+        "quote_hash": "qh_1748_003",
+        "confidence": 0.96,
+        "branch_options": [
+          {
+            "option_id": "kn003_a",
+            "text": "网友追问「向前看」的具体含义——如果有足够多的人在此时追问，真相可能提前曝光",
+            "tone": "冲突升级"
+          },
+          {
+            "option_id": "kn003_b",
+            "text": "善意的网友选择祝福——相信这是一个真正走出伤痛的人的正常选择，继续支持他的事业",
+            "tone": "稳健"
+          },
+          {
+            "option_id": "kn003_c",
+            "text": "有人发现改名前后内容的数据异常——从悼念到广告的内容比例变化是比改名本身更早出现的信号",
+            "tone": "意外反转"
+          }
+        ]
+      }
+    ]
+  },
+  "generated_at": 1747267200000,
+  "cdn_synced_at": null
+}

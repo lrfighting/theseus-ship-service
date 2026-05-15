@@ -1,0 +1,35 @@
+{
+  "cache_key": "ai_relations_1487746545537290240_66691ccdddcabccda6db9677db97d7073b146a66a5cf0678d46ac09b7bad39e1_v1_kimi-for-coding",
+  "work_id": "1487746545537290240",
+  "content_hash": "66691ccdddcabccda6db9677db97d7073b146a66a5cf0678d46ac09b7bad39e1",
+  "task_type": "relations",
+  "prompt_version": "v1",
+  "model": "kimi-for-coding",
+  "data": {
+    "relations": [
+      {
+        "from": "c001",
+        "to": "c002",
+        "relation": "孙女与失智外婆／爱与枷锁",
+        "intensity": "high",
+        "description": "「我」对外婆的爱是行动的唯一驱动力。外婆的脆弱让「我」无法自保时独自逃走，因为那代价是比死更难受的愧疚。脆弱点：外婆的失智让她无法配合「我」的任何计划，每次循环中她都可能在最关键时刻做出完全违反理性的事"
+      },
+      {
+        "from": "c001",
+        "to": "c003",
+        "relation": "猎物与猎人／反复死亡的命运对立",
+        "intensity": "high",
+        "description": "每一次循环都是「我」与这个女人的博弈。随着循环次数增加，「我」积累的信息逐渐与女人的行动模式建立起预判。脆弱点：女人的行动逻辑不完全符合理性——她的一些反应无法被预测，这是循环无法完美解决的残差风险"
+      },
+      {
+        "from": "c002",
+        "to": "c003",
+        "relation": "无辜受害者与无差别威胁",
+        "intensity": "mid",
+        "description": "外婆在失智状态下甚至将女人认作「小柚」，以最纯粹的善意走向最危险的处境。这种反差是故事中最令人心碎的设计——善意在恶意面前不是盾牌，是靶心"
+      }
+    ]
+  },
+  "generated_at": 1747267200000,
+  "cdn_synced_at": null
+}

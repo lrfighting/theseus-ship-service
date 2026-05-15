@@ -1,0 +1,42 @@
+{
+  "cache_key": "ai_relations_1935677831142171296_7000b982bea582b8d33a4e10dc050bb13c32cea7b39457a59c15dfedcd169fc0_v1_kimi-for-coding",
+  "work_id": "1935677831142171296",
+  "content_hash": "7000b982bea582b8d33a4e10dc050bb13c32cea7b39457a59c15dfedcd169fc0",
+  "task_type": "relations",
+  "prompt_version": "v1",
+  "model": "kimi-for-coding",
+  "data": {
+    "relations": [
+      {
+        "from": "c001",
+        "to": "c004",
+        "relation": "母亲与不认母亲的亲生子",
+        "intensity": "high",
+        "description": "温棠对瑜儿的爱是无条件的，但这份爱在瑜儿那里是不对称的——他被教导不需要认这个「只是个贵人」的母亲。脆弱点：瑜儿的每一次拒绝都是对温棠的二次伤害，但温棠始终无法真正放下"
+      },
+      {
+        "from": "c001",
+        "to": "c002",
+        "relation": "名义母亲与真心相认的非亲生子",
+        "intensity": "high",
+        "description": "这段关系从利用起步（裴琰需要保护，温棠被圣旨推着），却在真心的浇灌下变成了整个故事里最真实的情感。脆弱点：裴琰紧抓温棠衣角、睡着后依然不松手，是他内心极度不安全感的外显——任何新的背叛都可能让他彻底关闭"
+      },
+      {
+        "from": "c001",
+        "to": "c003",
+        "relation": "被保护目标与权力执掌者",
+        "intensity": "high",
+        "description": "皇后对温棠有着不对称的权力优势，却选择用最温柔的方式实施打压。这种关系最危险的地方在于：皇后永远不需要明说，她只需要「不帮忙」，温棠的任何努力都会被结构性地消解"
+      },
+      {
+        "from": "c002",
+        "to": "c004",
+        "relation": "被欺压的兄弟",
+        "intensity": "mid",
+        "description": "瑜儿用包石子的雪球砸破裴琰头部，还能得到仇公公的保护。这段关系揭示了宫廷权力的真实运作：弱者甚至不能还手，因为还手本身就是政治错误"
+      }
+    ]
+  },
+  "generated_at": 1747267200000,
+  "cdn_synced_at": null
+}

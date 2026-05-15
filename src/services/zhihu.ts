@@ -3,11 +3,14 @@
  *
  * - 默认调用真实开放接口（`openapi.zhihu.com/openapi/hackathon_story/*`）。
  * - HMAC-SHA256 签名规则与请求头按《技术方案 V1.0》§3 实现。
- * - 仅当环境变量 `ZHIHU_USE_FIXTURE=1` 时使用本地 fixture，供离线/演示用。
+ * - 当环境变量 `ZHIHU_USE_FIXTURE=1` 时从 `mocks/` 目录读取本地文件，供离线/演示用。
+ *   运行 `npm run init-mock` 可预取并保存真实数据到该目录。
  * - 真实接口失败时直接抛错，不静默回退到 fixture，避免假数据掩盖问题。
  */
 
 import { createHmac } from 'node:crypto';
+import { promises as fs } from 'node:fs';
+import { resolve } from 'node:path';
 import { config } from '../config';
 import { contentHash } from '../utils/hash';
 import { aiUpstream, badRequest, notFound } from '../utils/errors';
@@ -94,7 +97,7 @@ async function callZhihu<T>(path: string, search?: Record<string, string>): Prom
   return payload.data as T;
 }
 
-async function fetchListLive(): Promise<StorySummary[]> {
+export async function fetchListLive(): Promise<StorySummary[]> {
   const data = await callZhihu<StoryListResponse['data']>(
     '/openapi/hackathon_story/list',
   );
@@ -102,7 +105,7 @@ async function fetchListLive(): Promise<StorySummary[]> {
   return data;
 }
 
-async function fetchDetailLive(
+export async function fetchDetailLive(
   workId: string,
 ): Promise<Omit<StoryDetail, 'content_hash'>> {
   if (!workId) throw badRequest('work_id is required');
@@ -115,38 +118,37 @@ async function fetchDetailLive(
 }
 
 // ────────────────────────────────────────────────────────────────
-// Fixture（仅在 ZHIHU_USE_FIXTURE=1 时启用，开发离线演示）
+// Mock 文件读取（ZHIHU_USE_FIXTURE=1 时启用）
+// 运行 `npm run init-mock` 可预取并保存真实数据到 mocks/ 目录
 // ────────────────────────────────────────────────────────────────
 
-const FIXTURE_LIST: StorySummary[] = [
-  {
-    work_id: 'demo_001',
-    title: '秦始皇登月计划',
-    artwork:
-      'https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=900&q=80',
-    tab_artwork:
-      'https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=600&q=80',
-    description:
-      '我一觉醒来，发现自己自带系统穿越到秦始皇身边，凭借兑换功能我立志让大秦登上月球。',
-    labels: ['史脑洞', '穿越', '科幻', '爽文'],
-  },
-];
+const MOCK_DIR = resolve(process.cwd(), 'mocks');
 
-const FIXTURE_DETAIL: Record<string, Omit<StoryDetail, 'content_hash'>> = {
-  demo_001: {
-    work_id: 'demo_001',
-    chapter_name: '秦始皇登月计划',
-    author_avatar: 'https://pic1.zhimg.com/v2-2c2b08efa6f9c8a5f8a0_l.jpg',
-    author_name: '六酒',
-    labels: ['史脑洞', '穿越', '科幻', '爽文'],
-    introduction: '本内容版权为知乎及版权方所有，正在受版权保护中。',
-    content: [
-      '一觉醒来，我自带系统穿越到秦始皇身边。还可以凭借好感度兑换物品。我直接就是一个滑跪。',
-      '"陛下，此乃世界地图！" 秦始皇好感度+100。"陛下，此物可令人上天揽月，成仙人之举！" 秦始皇好感度爆表。"细说上天。"',
-      '我抖了抖手中的图纸：登月需要火箭、燃料、轨道计算，还有最重要的——一个能撑住排面的发射台。',
-    ].join('\n'),
-  },
-};
+async function loadMockList(): Promise<StorySummary[]> {
+  const path = resolve(MOCK_DIR, 'zhihu-list.json');
+  try {
+    const raw = await fs.readFile(path, 'utf-8');
+    return JSON.parse(raw) as StorySummary[];
+  } catch (err) {
+    if ((err as NodeJS.ErrnoException).code === 'ENOENT') {
+      throw aiUpstream(
+        'Mock 文件不存在：请先运行 `npm run init-mock` 预取数据（mocks/zhihu-list.json）',
+      );
+    }
+    throw aiUpstream(`Failed to read mock list: ${(err as Error).message}`);
+  }
+}
+
+async function loadMockDetail(workId: string): Promise<StoryDetail | null> {
+  const path = resolve(MOCK_DIR, 'zhihu-details', `${workId}.json`);
+  try {
+    const raw = await fs.readFile(path, 'utf-8');
+    return JSON.parse(raw) as StoryDetail;
+  } catch (err) {
+    if ((err as NodeJS.ErrnoException).code === 'ENOENT') return null;
+    throw aiUpstream(`Failed to read mock detail for ${workId}: ${(err as Error).message}`);
+  }
+}
 
 // ────────────────────────────────────────────────────────────────
 // 对外接口
@@ -154,18 +156,16 @@ const FIXTURE_DETAIL: Record<string, Omit<StoryDetail, 'content_hash'>> = {
 
 export async function fetchStoryList(): Promise<StorySummary[]> {
   if (USE_FIXTURE) {
-    log.info('using ZHIHU_USE_FIXTURE for list');
-    return FIXTURE_LIST;
+    log.info('ZHIHU_USE_FIXTURE=1: loading story list from mocks/zhihu-list.json');
+    return loadMockList();
   }
   return fetchListLive();
 }
 
 export async function fetchStoryDetail(workId: string): Promise<StoryDetail | null> {
   if (USE_FIXTURE) {
-    log.info(`using ZHIHU_USE_FIXTURE for detail ${workId}`);
-    const detail = FIXTURE_DETAIL[workId];
-    if (!detail) return null;
-    return { ...detail, content_hash: contentHash(detail.content) };
+    log.info(`ZHIHU_USE_FIXTURE=1: loading detail for ${workId} from mocks/`);
+    return loadMockDetail(workId);
   }
   try {
     const detail = await fetchDetailLive(workId);
@@ -178,3 +178,4 @@ export async function fetchStoryDetail(workId: string): Promise<StoryDetail | nu
 
 /** 测试钩子：仅在 jest/单元测试里使用 */
 export const __testing = { createAuthHeaders };
+

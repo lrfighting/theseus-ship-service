@@ -1,0 +1,110 @@
+{
+  "cache_key": "ai_key_nodes_1609568601303859200_0e9b3d0c552aba7fe4a4c95593ad6df94e889d57fbf772512b9d3cd56fd50b30_v1_kimi-for-coding",
+  "work_id": "1609568601303859200",
+  "content_hash": "0e9b3d0c552aba7fe4a4c95593ad6df94e889d57fbf772512b9d3cd56fd50b30",
+  "task_type": "key_nodes",
+  "prompt_version": "v1",
+  "model": "kimi-for-coding",
+  "data": {
+    "key_nodes": [
+      {
+        "node_id": "kn001",
+        "title": "「你考上有什么用」",
+        "summary": "妈妈对燕子说出「你考上有什么用，你又不是你哥」，这句话是燕子所有隐忍积累的临界点",
+        "importance": "main",
+        "node_type": "turning_point",
+        "source": "original",
+        "depth": 0,
+        "parent_branch_id": null,
+        "paragraph_index": 14,
+        "char_range": [1380, 1480],
+        "anchor_text": "「你考上有什么用，你又不是你哥。」",
+        "quote_hash": "qh_1609_001",
+        "confidence": 0.98,
+        "branch_options": [
+          {
+            "option_id": "kn001_a",
+            "text": "燕子当场反击——第一次把积压多年的委屈说出口，不管后果，只是终于不想再咽下去了",
+            "tone": "冲突升级"
+          },
+          {
+            "option_id": "kn001_b",
+            "text": "燕子转身离开——什么都不说，把那句话压在心底，把它变成此后所有努力的燃料",
+            "tone": "稳健"
+          },
+          {
+            "option_id": "kn001_c",
+            "text": "燕子反问妈妈——「如果我是哥哥，您会让我念书吗？」让妈妈第一次直面自己偏心的根源",
+            "tone": "意外反转"
+          }
+        ]
+      },
+      {
+        "node_id": "kn002",
+        "title": "英子的最后一句话",
+        "summary": "英子被塞进婚车前附在燕子耳边说「你一定，一定不要像我这样」，这是整个故事的情感核爆点",
+        "importance": "main",
+        "node_type": "emotional",
+        "source": "original",
+        "depth": 0,
+        "parent_branch_id": null,
+        "paragraph_index": 20,
+        "char_range": [1820, 1930],
+        "anchor_text": "「燕子，我飞不起来了。你一定，一定不要像我这样。」",
+        "quote_hash": "qh_1609_002",
+        "confidence": 0.99,
+        "branch_options": [
+          {
+            "option_id": "kn002_a",
+            "text": "阻拦婚车——不顾一切冲上去，哪怕没有任何成功的可能，也要让英子知道有人在为她抗争",
+            "tone": "冲突升级"
+          },
+          {
+            "option_id": "kn002_b",
+            "text": "记住英子的眼睛——站在原地，把这一幕深深刻进心里，从此用英子的话武装自己的每一个选择",
+            "tone": "稳健"
+          },
+          {
+            "option_id": "kn002_c",
+            "text": "追问英子想做什么——在车门关上前问出那个从没人问过的问题：「你自己最想要的是什么？」",
+            "tone": "关系扩展"
+          }
+        ]
+      },
+      {
+        "node_id": "kn003",
+        "title": "「不，我不去打工」",
+        "summary": "妈妈想让燕子初中毕业后去广东打工贴补家用，燕子第一次站起来大声说不",
+        "importance": "main",
+        "node_type": "turning_point",
+        "source": "original",
+        "depth": 0,
+        "parent_branch_id": null,
+        "paragraph_index": 24,
+        "char_range": [2180, 2260],
+        "anchor_text": "我霍然站起：「不，我不去打工，我要——」",
+        "quote_hash": "qh_1609_003",
+        "confidence": 0.97,
+        "branch_options": [
+          {
+            "option_id": "kn003_a",
+            "text": "说出「我要考高中」——把那个从未被允许说出口的梦想当众说出，让它变成一个无法收回的宣言",
+            "tone": "冲突升级"
+          },
+          {
+            "option_id": "kn003_b",
+            "text": "拿出所有奖状——用证据而非情绪，把自己的价值展示在桌上，让家人无法忽视",
+            "tone": "稳健"
+          },
+          {
+            "option_id": "kn003_c",
+            "text": "联系大伯寻求支持——绕过父母的封锁，寻找唯一一个愿意认真对待她的成年人作为援军",
+            "tone": "意外反转"
+          }
+        ]
+      }
+    ]
+  },
+  "generated_at": 1747267200000,
+  "cdn_synced_at": null
+}

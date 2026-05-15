@@ -1,0 +1,28 @@
+{
+  "cache_key": "ai_relations_1781367684632399872_9e73a3abfe6d82bd852a85965061df88609ca2ae4f412d42e1d3124b79292404_v1_kimi-for-coding",
+  "work_id": "1781367684632399872",
+  "content_hash": "9e73a3abfe6d82bd852a85965061df88609ca2ae4f412d42e1d3124b79292404",
+  "task_type": "relations",
+  "prompt_version": "v1",
+  "model": "kimi-for-coding",
+  "data": {
+    "relations": [
+      {
+        "from": "c001",
+        "to": "c002",
+        "relation": "势均力敌的双向斩首对手",
+        "intensity": "high",
+        "description": "岳飞是兀术七战七胜后遭遇的第一个真正的对手，兀术是岳飞七年来等待的那块最难啃的硬骨头。两人的对决不只是战术对抗，更是两种军事哲学的碰撞。脆弱点：任何一方的主帅被斩首，整场战争的走向将彻底逆转"
+      },
+      {
+        "from": "c001",
+        "to": "c003",
+        "relation": "武将与软弱皇帝的隐形博弈",
+        "intensity": "high",
+        "description": "岳飞对赵构的服从是真实的，但他在军事部署上一再突破授权范围，布置义军、请旨迎战兀术——每一步都在隐性地测试政治边界。脆弱点：赵构对岳飞的信任从未是无条件的，岳飞离「功高震主」的红线越来越近"
+      }
+    ]
+  },
+  "generated_at": 1747267200000,
+  "cdn_synced_at": null
+}

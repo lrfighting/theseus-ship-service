@@ -1,0 +1,110 @@
+{
+  "cache_key": "ai_key_nodes_1949873407219970935_ccc3b82504597c67101f7917a5e88f42b5473338b090f3f4d57f089cf4758d6b_v1_kimi-for-coding",
+  "work_id": "1949873407219970935",
+  "content_hash": "ccc3b82504597c67101f7917a5e88f42b5473338b090f3f4d57f089cf4758d6b",
+  "task_type": "key_nodes",
+  "prompt_version": "v1",
+  "model": "kimi-for-coding",
+  "data": {
+    "key_nodes": [
+      {
+        "node_id": "kn001",
+        "title": "去湘西还是去贵州",
+        "summary": "所有人认为去湘西是唯一合理选择，毛泽东站出来说去湘西是死路，必须去贵州——这是第一个「反常识的正确判断」",
+        "importance": "main",
+        "node_type": "turning_point",
+        "source": "original",
+        "depth": 0,
+        "parent_branch_id": null,
+        "paragraph_index": 8,
+        "char_range": [780, 950],
+        "anchor_text": "关键时刻，毛泽东站了出来，他果断提出：去湘西是死路一条，必须去贵州才有一线生机",
+        "quote_hash": "qh_1949_001",
+        "confidence": 0.99,
+        "branch_options": [
+          {
+            "option_id": "kn001_a",
+            "text": "按多数意见去湘西——服从集体决策，走那条「合理」的路，直接踏入蒋介石已经预设好的口袋阵",
+            "tone": "稳健"
+          },
+          {
+            "option_id": "kn001_b",
+            "text": "坚持去贵州——在所有人都反对的情况下，寸步不让，用逻辑和预判说服周恩来、张闻天、王稼祥",
+            "tone": "冲突升级"
+          },
+          {
+            "option_id": "kn001_c",
+            "text": "提出第三条路——去云南，完全出乎蒋介石的所有预判，以更激进的反常规行动制造战略突破",
+            "tone": "意外反转"
+          }
+        ]
+      },
+      {
+        "node_id": "kn002",
+        "title": "打土城失败后的抉择",
+        "summary": "土城打不下来，敌人正在合围，毛泽东提出「回头」打遵义——所有人都懵了，但这个反直觉的决策是出奇制胜的关键",
+        "importance": "main",
+        "node_type": "turning_point",
+        "source": "original",
+        "depth": 0,
+        "parent_branch_id": null,
+        "paragraph_index": 16,
+        "char_range": [1580, 1720],
+        "anchor_text": "关键时刻，毛泽东第二次提出了他的想法，两个字：回去。回哪里去？回贵州，遵义",
+        "quote_hash": "qh_1949_002",
+        "confidence": 0.98,
+        "branch_options": [
+          {
+            "option_id": "kn002_a",
+            "text": "继续强攻土城——集中全部兵力再次冲击，以消耗换取强行渡河的机会，承担更大的战损风险",
+            "tone": "冲突升级"
+          },
+          {
+            "option_id": "kn002_b",
+            "text": "听从毛泽东，回头打遵义——接受「以退为进」的逻辑，利用敌人认为我们一定继续向西的判断错误",
+            "tone": "意外反转"
+          },
+          {
+            "option_id": "kn002_c",
+            "text": "分兵突围——一部分继续佯攻土城吸引注意，主力悄然绕行，在敌人判断失误的窗口期完成穿插",
+            "tone": "稳健"
+          }
+        ]
+      },
+      {
+        "node_id": "kn003",
+        "title": "遵义会议",
+        "summary": "毛泽东在遵义会议上重新获得战略决策权，这是整个长征最重要的命运拐点——不是一场战役，而是一次会议",
+        "importance": "main",
+        "node_type": "turning_point",
+        "source": "original",
+        "depth": 0,
+        "parent_branch_id": null,
+        "paragraph_index": 12,
+        "char_range": [1180, 1280],
+        "anchor_text": "著名的「遵义会议」召开。在会上，长期受到打压的毛泽东成为了政治局常委",
+        "quote_hash": "qh_1949_003",
+        "confidence": 0.97,
+        "branch_options": [
+          {
+            "option_id": "kn003_a",
+            "text": "周恩来、张闻天不支持毛泽东——维持李德博古的领导，继续沿用阵地战思路，让红军走向另一种命运",
+            "tone": "冲突升级"
+          },
+          {
+            "option_id": "kn003_b",
+            "text": "遵义会议后毛泽东立即提出四渡赤水方案——会议刚结束就着手部署最关键的战略欺骗行动",
+            "tone": "稳健"
+          },
+          {
+            "option_id": "kn003_c",
+            "text": "遵义会议通过后向蒋介石散布虚假情报——主动让对手认为遵义会议失败了，红军陷入内乱，制造蒋介石的误判",
+            "tone": "意外反转"
+          }
+        ]
+      }
+    ]
+  },
+  "generated_at": 1747267200000,
+  "cdn_synced_at": null
+}

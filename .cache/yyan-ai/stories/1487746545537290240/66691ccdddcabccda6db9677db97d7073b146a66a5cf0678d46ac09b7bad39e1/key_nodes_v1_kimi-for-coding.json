@@ -1,0 +1,142 @@
+{
+  "cache_key": "ai_key_nodes_1487746545537290240_66691ccdddcabccda6db9677db97d7073b146a66a5cf0678d46ac09b7bad39e1_v1_kimi-for-coding",
+  "work_id": "1487746545537290240",
+  "content_hash": "66691ccdddcabccda6db9677db97d7073b146a66a5cf0678d46ac09b7bad39e1",
+  "task_type": "key_nodes",
+  "prompt_version": "v1",
+  "model": "kimi-for-coding",
+  "data": {
+    "key_nodes": [
+      {
+        "node_id": "kn001",
+        "title": "迈出门还是缩回去",
+        "summary": "第一次循环中「我」在门缝后看见女人，选择了退缩，导致外婆被杀。这是懦弱与勇气命运分叉的原点",
+        "importance": "main",
+        "node_type": "turning_point",
+        "source": "original",
+        "depth": 0,
+        "parent_branch_id": null,
+        "paragraph_index": 9,
+        "char_range": [1100, 1250],
+        "anchor_text": "强烈的恐惧，让我只能缩在门后面",
+        "quote_hash": "qh_1487_001",
+        "confidence": 0.98,
+        "branch_options": [
+          {
+            "option_id": "kn001_a",
+            "text": "冲出去制造声响——放弃隐藏，主动暴露自己，用噪音和混乱打破女人的行动节奏，抢占一分钟时间差",
+            "tone": "冲突升级"
+          },
+          {
+            "option_id": "kn001_b",
+            "text": "先堵外婆的门——不管女人，以最快速度冲进外婆房间锁门，优先保住软肋，用时间换报警机会",
+            "tone": "稳健"
+          },
+          {
+            "option_id": "kn001_c",
+            "text": "拔走充电的手机——在女人注意外婆时趁机拿走手机，剥夺她的目标物，可能改变她的行动动机",
+            "tone": "意外反转"
+          }
+        ]
+      },
+      {
+        "node_id": "kn002",
+        "title": "外婆手机没电的绝境",
+        "summary": "第二次循环中「我」冲进外婆房间，发现手机没电无法报警，此刻是整个循环中最绝望的命运节点",
+        "importance": "main",
+        "node_type": "conflict",
+        "source": "original",
+        "depth": 0,
+        "parent_branch_id": null,
+        "paragraph_index": 15,
+        "char_range": [1680, 1800],
+        "anchor_text": "让我绝望的是，她的手机没电了。「为什么不充电？！」",
+        "quote_hash": "qh_1487_002",
+        "confidence": 0.95,
+        "branch_options": [
+          {
+            "option_id": "kn002_a",
+            "text": "用手机充电线当武器——绝境中重新定义手中的资源，充电线可以是绊绳，是束缚工具，是反击的起点",
+            "tone": "意外反转"
+          },
+          {
+            "option_id": "kn002_b",
+            "text": "用力敲击墙壁呼救——放弃对抗，全力制造噪音唤醒邻居，以暴露自己位置为代价换取外部援助",
+            "tone": "冲突升级"
+          },
+          {
+            "option_id": "kn002_c",
+            "text": "和外婆一起躲进衣柜——把最小的空间变成最后的堡垒，等待女人自行离开或黎明带来转机",
+            "tone": "稳健"
+          }
+        ]
+      },
+      {
+        "node_id": "kn003",
+        "title": "钥匙漏洞被发现",
+        "summary": "「我」锁上外婆房门后听到钥匙被拔出，意识到那把钥匙同样能打开这扇门，安全感瞬间崩塌",
+        "importance": "main",
+        "node_type": "revelation",
+        "source": "original",
+        "depth": 0,
+        "parent_branch_id": null,
+        "paragraph_index": 18,
+        "char_range": [1950, 2050],
+        "anchor_text": "我的房间的门锁上插着钥匙。这个钥匙，也可以打开这扇门",
+        "quote_hash": "qh_1487_003",
+        "confidence": 0.94,
+        "branch_options": [
+          {
+            "option_id": "kn003_a",
+            "text": "用床架顶住房门——用力量和重量弥补锁具的漏洞，为外婆争取最后的时间",
+            "tone": "稳健"
+          },
+          {
+            "option_id": "kn003_b",
+            "text": "主动开门迎击——与其等待被动挨打，不如在女人开门瞬间以奇袭反制，利用对方的惯性和意外",
+            "tone": "冲突升级"
+          },
+          {
+            "option_id": "kn003_c",
+            "text": "假装外婆睡着——熄灯保持绝对安静，让女人以为房间里没人，用欺骗拖延时间",
+            "tone": "意外反转"
+          }
+        ]
+      },
+      {
+        "node_id": "kn004",
+        "title": "第三次循环的选择",
+        "summary": "经历了两次死亡，「我」冷静下来意识到自己处在时间循环中，第三次拥有了主动出击的可能性",
+        "importance": "main",
+        "node_type": "turning_point",
+        "source": "original",
+        "depth": 0,
+        "parent_branch_id": null,
+        "paragraph_index": 24,
+        "char_range": [2350, 2480],
+        "anchor_text": "我没有丝毫犹豫地冲出门，拔出了钥匙",
+        "quote_hash": "qh_1487_004",
+        "confidence": 0.96,
+        "branch_options": [
+          {
+            "option_id": "kn004_a",
+            "text": "拔钥匙断后路——以最快速度拔走钥匙，切断女人进入外婆房间的路径，把决战限制在可控区域",
+            "tone": "稳健"
+          },
+          {
+            "option_id": "kn004_b",
+            "text": "直接尝试制服女人——利用两次循环积累的行动规律，在女人专注于手机时从侧面偷袭，打她个措手不及",
+            "tone": "冲突升级"
+          },
+          {
+            "option_id": "kn004_c",
+            "text": "故意触发手机通知引开她——用另一部设备触发「我」手机的通知，将女人的注意力引向窗外",
+            "tone": "意外反转"
+          }
+        ]
+      }
+    ]
+  },
+  "generated_at": 1747267200000,
+  "cdn_synced_at": null
+}

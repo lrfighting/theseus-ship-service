@@ -1,0 +1,35 @@
+{
+  "cache_key": "ai_relations_1622619372492722176_67c9f9c4cf98fec9b475387513fd1d3c3f5445772abbbd344e9e4977c6efaa98_v1_kimi-for-coding",
+  "work_id": "1622619372492722176",
+  "content_hash": "67c9f9c4cf98fec9b475387513fd1d3c3f5445772abbbd344e9e4977c6efaa98",
+  "task_type": "relations",
+  "prompt_version": "v1",
+  "model": "kimi-for-coding",
+  "data": {
+    "relations": [
+      {
+        "from": "c001",
+        "to": "c002",
+        "relation": "弱者与入魔保护者",
+        "intensity": "high",
+        "description": "八戒明知自己已入魔，依然选择把玉梳和九齿钉耙交给小白龙，托付逃出后的事务。这是全篇最真实的情感——一个正在堕落的人对还没有堕落的人的最后守护。脆弱点：八戒入魔后的行为将越来越不可控，他对小白龙的保护有一个不知在何处的有效期"
+      },
+      {
+        "from": "c001",
+        "to": "c003",
+        "relation": "坐骑与被侵蚀的主人",
+        "intensity": "mid",
+        "description": "师父的警告本是珍贵的，但进入灵山后他的声音和意志已经被魔气覆盖——小白龙必须学会辨别哪一句话是真正的师父说的，哪一句是魔气借师父之口说的"
+      },
+      {
+        "from": "c001",
+        "to": "c004",
+        "relation": "清醒者与身份存疑的危险变量",
+        "intensity": "high",
+        "description": "如果大师兄是六耳猕猴，那么小白龙现在所处的处境比任何时候都更危险——身边唯一有足够力量保护他们的人，可能本身就是敌人。这种不确定性是整个故事中最深的恐惧"
+      }
+    ]
+  },
+  "generated_at": 1747267200000,
+  "cdn_synced_at": null
+}

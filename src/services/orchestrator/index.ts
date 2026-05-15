@@ -159,25 +159,21 @@ function optionSemanticallyRelated(text: string, paragraph: string): boolean {
 }
 
 function buildParagraphGroundedFallbackOptions(paragraph: string, node: KeyNode): BranchOption[] {
-  const p = paragraph.replace(/\s/g, '');
-  const anchor = (node.anchor_text ?? '').trim().slice(0, 16) || p.slice(0, 16);
   const id = node.node_id;
-  // 基于节点标题生成主题化的兜底选项，避免"仍处在/语境/仍基于"等废话
-  const title = (node.title ?? '').trim() || '此处抉择';
   return [
     {
       option_id: `${id}_fb_1`,
-      text: `直面${title}——不再犹豫，以最直接的方式应对当前局面，哪怕代价巨大`,
+      text: `主动改写——不再等待，以最直接的方式打破现状，哪怕代价是无法回头`,
       tone: '冲突升级',
     },
     {
       option_id: `${id}_fb_2`,
-      text: `稳妥应对${title}——暂时退让保全自身，暗中观察形势变化，伺机而动`,
+      text: `承受命运——咽下这一刻，沉默地接受，看命运会把自己带向何处`,
       tone: '稳健',
     },
     {
       option_id: `${id}_fb_3`,
-      text: `另辟蹊径——跳出${title}的二元对立，用出乎意料的第三种方式打破僵局`,
+      text: `走第三条路——拒绝非此即彼，在别人都没想到的方向找到出口`,
       tone: '意外反转',
     },
   ];

@@ -1,0 +1,110 @@
+{
+  "cache_key": "ai_key_nodes_1935677831142171296_7000b982bea582b8d33a4e10dc050bb13c32cea7b39457a59c15dfedcd169fc0_v1_kimi-for-coding",
+  "work_id": "1935677831142171296",
+  "content_hash": "7000b982bea582b8d33a4e10dc050bb13c32cea7b39457a59c15dfedcd169fc0",
+  "task_type": "key_nodes",
+  "prompt_version": "v1",
+  "model": "kimi-for-coding",
+  "data": {
+    "key_nodes": [
+      {
+        "node_id": "kn001",
+        "title": "瑜儿打翻药碗",
+        "summary": "温棠的血液入药救治瑜儿，瑜儿却把药打翻在地，说「好恶心」——这是温棠与亲生子关系最终破裂的决定性时刻",
+        "importance": "main",
+        "node_type": "turning_point",
+        "source": "original",
+        "depth": 0,
+        "parent_branch_id": null,
+        "paragraph_index": 7,
+        "char_range": [800, 960],
+        "anchor_text": "「好恶心。瑜儿只有母后一个娘亲，你算什么东西？」",
+        "quote_hash": "qh_1935_001",
+        "confidence": 0.97,
+        "branch_options": [
+          {
+            "option_id": "kn001_a",
+            "text": "当场质问皇后——不跪地请罪，而是站起来问：这孩子到底学了什么，才会对生他的人说出这种话",
+            "tone": "冲突升级"
+          },
+          {
+            "option_id": "kn001_b",
+            "text": "默默磕头离去——咽下这一刀，把对瑜儿的痛彻底封存，把有限的精力转向裴琰",
+            "tone": "稳健"
+          },
+          {
+            "option_id": "kn001_c",
+            "text": "轻声对熟睡的瑜儿说一句话——不是请罪，不是哭诉，只是在他听不见的时候，把那些从未说出口的话轻轻说完",
+            "tone": "意外反转"
+          }
+        ]
+      },
+      {
+        "node_id": "kn002",
+        "title": "圣旨送来裴琰",
+        "summary": "皇帝下旨将三皇子记在温棠名下，裴琰跪在风雪中说「母妃，琰儿知道怎么帮母妃争宠」——一个九岁孩子学会了把自己当筹码",
+        "importance": "main",
+        "node_type": "turning_point",
+        "source": "original",
+        "depth": 0,
+        "parent_branch_id": null,
+        "paragraph_index": 14,
+        "char_range": [1520, 1670],
+        "anchor_text": "「母妃，琰儿知道怎么帮母妃争宠，争回四弟弟。母妃，您会知道琰儿是有用的。」",
+        "quote_hash": "qh_1935_002",
+        "confidence": 0.98,
+        "branch_options": [
+          {
+            "option_id": "kn002_a",
+            "text": "立刻拒绝这种交换——告诉裴琰他不需要「有用」，采桑宫不是那种地方，让他先学会接受而不是付出",
+            "tone": "意外反转"
+          },
+          {
+            "option_id": "kn002_b",
+            "text": "扶起裴琰不多说话——先把他带进屋，给他上药换衣，用行动告诉他这里会照顾他，其他的以后再说",
+            "tone": "稳健"
+          },
+          {
+            "option_id": "kn002_c",
+            "text": "直接问裴琰「你自己想要什么」——绕开所有的利用关系，第一个问出这个没人问过他的问题",
+            "tone": "关系扩展"
+          }
+        ]
+      },
+      {
+        "node_id": "kn003",
+        "title": "温棠欺负三皇子",
+        "summary": "为避免被视为皇后的敌人，温棠被迫加入欺负裴琰的行列，却只说出「你只配吃下等点心」——她的善意从第一秒就没有消失",
+        "importance": "main",
+        "node_type": "conflict",
+        "source": "original",
+        "depth": 0,
+        "parent_branch_id": null,
+        "paragraph_index": 4,
+        "char_range": [380, 480],
+        "anchor_text": "「你只配吃这种下等点心！」九岁的三皇子攥着那块枣花糕，安安静静站在树影里",
+        "quote_hash": "qh_1935_003",
+        "confidence": 0.95,
+        "branch_options": [
+          {
+            "option_id": "kn003_a",
+            "text": "拒绝参与欺凌——在所有人都踩上裴琰一脚时，不加入，哪怕这意味着站到了皇后的对立面",
+            "tone": "冲突升级"
+          },
+          {
+            "option_id": "kn003_b",
+            "text": "欺负的同时塞食物——用看似羞辱实为保护的方式，在两个阵营之间找到一条没有人注意到的中间路",
+            "tone": "稳健"
+          },
+          {
+            "option_id": "kn003_c",
+            "text": "欺负完之后悄悄留下来——等其他人走后，在裴琰面前蹲下来，不解释，只是陪他站一会儿",
+            "tone": "意外反转"
+          }
+        ]
+      }
+    ]
+  },
+  "generated_at": 1747267200000,
+  "cdn_synced_at": null
+}

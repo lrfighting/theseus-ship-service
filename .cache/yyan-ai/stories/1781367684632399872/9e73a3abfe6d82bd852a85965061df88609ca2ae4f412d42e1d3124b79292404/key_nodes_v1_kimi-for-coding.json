@@ -1,0 +1,110 @@
+{
+  "cache_key": "ai_key_nodes_1781367684632399872_9e73a3abfe6d82bd852a85965061df88609ca2ae4f412d42e1d3124b79292404_v1_kimi-for-coding",
+  "work_id": "1781367684632399872",
+  "content_hash": "9e73a3abfe6d82bd852a85965061df88609ca2ae4f412d42e1d3124b79292404",
+  "task_type": "key_nodes",
+  "prompt_version": "v1",
+  "model": "kimi-for-coding",
+  "data": {
+    "key_nodes": [
+      {
+        "node_id": "kn001",
+        "title": "岳飞请旨迎战兀术",
+        "summary": "面对金国中路最强军，所有人都想绕开兀术，只有岳飞上书请旨主动迎战——这是他此生最重要的一次主动选择",
+        "importance": "main",
+        "node_type": "turning_point",
+        "source": "original",
+        "depth": 0,
+        "parent_branch_id": null,
+        "paragraph_index": 10,
+        "char_range": [980, 1100],
+        "anchor_text": "岳飞接旨后，异常兴奋，他直接上书赵构——请陛下允许我出兵中路，跟金人统帅兀术一决生死！",
+        "quote_hash": "qh_1781_001",
+        "confidence": 0.98,
+        "branch_options": [
+          {
+            "option_id": "kn001_a",
+            "text": "岳飞请旨时同时提交完整北伐方案——把「迎战兀术」包装成一个战略机遇，而不是个人英雄主义，降低赵构的政治顾虑",
+            "tone": "稳健"
+          },
+          {
+            "option_id": "kn001_b",
+            "text": "岳飞直接出兵不等旨意——以战机稍纵即逝为由先斩后奏，彻底打破政治枷锁，以军事结果倒逼政治认可",
+            "tone": "冲突升级"
+          },
+          {
+            "option_id": "kn001_c",
+            "text": "岳飞要求韩世忠协同作战——打破各战区单独行动的惯例，构建多战区联动，让兀术真正陷入包围",
+            "tone": "意外反转"
+          }
+        ]
+      },
+      {
+        "node_id": "kn002",
+        "title": "麻扎刀被反制",
+        "summary": "岳家军的杀手锏麻扎刀被金军步骑混编战术完全克制，前锋陷入苦战，岳飞必须找到新的破阵方式",
+        "importance": "main",
+        "node_type": "conflict",
+        "source": "original",
+        "depth": 0,
+        "parent_branch_id": null,
+        "paragraph_index": 18,
+        "char_range": [1780, 1920],
+        "anchor_text": "金军配合的极为巧妙，大队步兵在骑兵的两侧，交替掩护战马，防止被岳家军的特制「斩马腿武器」——麻扎刀砍伤",
+        "quote_hash": "qh_1781_002",
+        "confidence": 0.96,
+        "branch_options": [
+          {
+            "option_id": "kn002_a",
+            "text": "岳飞命令亲军徒手冲阵——舍弃所有武器，直接扑向金军骑兵斩马腿，以血肉之躯突破步兵防线",
+            "tone": "冲突升级"
+          },
+          {
+            "option_id": "kn002_b",
+            "text": "岳飞改变阵型吸引金军分散——用佯攻迫使步兵与骑兵脱节，制造麻扎刀可以发挥作用的空隙",
+            "tone": "稳健"
+          },
+          {
+            "option_id": "kn002_c",
+            "text": "岳飞直接对兀术本人发起斩首行动——既然正面战术被克制，不如把所有力量集中在斩首这一点上，以最高风险换取最大收益",
+            "tone": "意外反转"
+          }
+        ]
+      },
+      {
+        "node_id": "kn003",
+        "title": "赵构的「虽胜亦罪」令",
+        "summary": "赵构提前向所有武将下达「不可主动挑衅，虽胜亦治重罪」的命令，为岳飞的任何胜利都事先套上了枷锁",
+        "importance": "main",
+        "node_type": "plot_hook",
+        "source": "original",
+        "depth": 0,
+        "parent_branch_id": null,
+        "paragraph_index": 4,
+        "char_range": [380, 500],
+        "anchor_text": "严令各地的武将……绝不可对金人主动挑衅——否则「虽胜，亦治重罪」！",
+        "quote_hash": "qh_1781_003",
+        "confidence": 0.95,
+        "branch_options": [
+          {
+            "option_id": "kn003_a",
+            "text": "秦桧此时介入弹劾岳飞的越权布置——利用后方义军攻击金军补给线一事做文章，在岳飞还在打仗时就启动政治清算",
+            "tone": "冲突升级"
+          },
+          {
+            "option_id": "kn003_b",
+            "text": "赵构在关键时刻选择支持岳飞——在王伦传来海上被堵的消息后，赵构意识到只有打赢才能活，暂时放开对岳飞的政治限制",
+            "tone": "稳健"
+          },
+          {
+            "option_id": "kn003_c",
+            "text": "岳飞在战前公开表态——主动向赵构承诺「此战绝不越过某条线」，用承诺换取临时的政治授权",
+            "tone": "意外反转"
+          }
+        ]
+      }
+    ]
+  },
+  "generated_at": 1747267200000,
+  "cdn_synced_at": null
+}

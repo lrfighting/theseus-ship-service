@@ -1,0 +1,38 @@
+{
+  "cache_key": "ai_objects_1644038836790169600_c5045db4076f1c8354a4030521a4b0d30ccf90ccca58b23a4a6ac3e5d2c3105c_v1_kimi-for-coding",
+  "work_id": "1644038836790169600",
+  "content_hash": "c5045db4076f1c8354a4030521a4b0d30ccf90ccca58b23a4a6ac3e5d2c3105c",
+  "task_type": "objects",
+  "prompt_version": "v1",
+  "model": "kimi-for-coding",
+  "data": {
+    "objects": [
+      {
+        "object_id": "o001",
+        "name": "神秘系统",
+        "type": "穿越核心道具",
+        "description": "周继盛穿越后获得的系统，具备好感度实时追踪、商品兑换等功能。每次与关键NPC互动时的好感度变化，是故事中隐性的情节推进信号",
+        "current_owner": "c001",
+        "story_role": "穿越者在这个时代唯一的生存依托，同时也是改写历史的核心杠杆。系统的每一次响应都在告诉玩家：下一步该怎么走"
+      },
+      {
+        "object_id": "o002",
+        "name": "《华夏上下五千年》",
+        "type": "历史情报载体",
+        "description": "由周继盛从系统商店兑换出的现代历史读物，记载历朝历代兴衰始末。秦始皇看完此书的那一刻，他第一次从外部视角看到了自己帝国的命运终点",
+        "current_owner": "c002",
+        "story_role": "命运天平的第一个砝码。这本书不仅是信息，更是始皇自我认知被彻底颠覆的催化剂——他在书中看到的不是历史，是他亲手埋下的悲剧"
+      },
+      {
+        "object_id": "o003",
+        "name": "龙辇",
+        "type": "权力象征与密室场景",
+        "description": "秦始皇巡游天下的御用车驾，密闭、威严，是权力的移动容器",
+        "current_owner": "c002",
+        "story_role": "故事核心对话的物理舞台。龙辇的密闭性制造了极端的叙事张力——在这个没有逃路的空间里，所有改变历史的关键话语都在此发出"
+      }
+    ]
+  },
+  "generated_at": 1747267200000,
+  "cdn_synced_at": null
+}

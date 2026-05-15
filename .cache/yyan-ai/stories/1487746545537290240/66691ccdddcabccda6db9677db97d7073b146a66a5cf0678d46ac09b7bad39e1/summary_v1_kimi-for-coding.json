@@ -1,0 +1,15 @@
+{
+  "cache_key": "ai_summary_1487746545537290240_66691ccdddcabccda6db9677db97d7073b146a66a5cf0678d46ac09b7bad39e1_v1_kimi-for-coding",
+  "work_id": "1487746545537290240",
+  "content_hash": "66691ccdddcabccda6db9677db97d7073b146a66a5cf0678d46ac09b7bad39e1",
+  "task_type": "summary",
+  "prompt_version": "v1",
+  "model": "kimi-for-coding",
+  "data": {
+    "story_summary": "「我」在凌晨三点时间不断循环——每一次都死在持刀女人手下，每一次都重新醒来。这是一个关于恐惧与勇气的命运拐点故事：第一次死于无知，第二次死于懦弱，第三次，「我」终于开始主动反击。循环本身不是惩罚，而是一次次被强迫直视自己最深层恐惧的机会——外婆是我的软肋，也是我每次鼓起勇气的唯一理由。",
+    "tone": "极度压抑惊悚，暗藏一丝人性温暖",
+    "themes": ["时间循环与宿命抗争", "懦弱与勇气的边界", "对至亲的爱与无力感", "恐惧的本质是什么", "主动与被动之间的选择"]
+  },
+  "generated_at": 1747267200000,
+  "cdn_synced_at": null
+}

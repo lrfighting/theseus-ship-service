@@ -1,0 +1,28 @@
+{
+  "cache_key": "ai_relations_1949873407219970935_ccc3b82504597c67101f7917a5e88f42b5473338b090f3f4d57f089cf4758d6b_v1_kimi-for-coding",
+  "work_id": "1949873407219970935",
+  "content_hash": "ccc3b82504597c67101f7917a5e88f42b5473338b090f3f4d57f089cf4758d6b",
+  "task_type": "relations",
+  "prompt_version": "v1",
+  "model": "kimi-for-coding",
+  "data": {
+    "relations": [
+      {
+        "from": "c001",
+        "to": "c002",
+        "relation": "「自由派」与「学院派」的战略博弈",
+        "intensity": "high",
+        "description": "毛泽东与蒋介石从未在同一个战场上直接相遇，但他们进行的是一场纯粹的智识战争——谁能更准确地预判对方的下一步。毛泽东的核心优势：他比蒋介石更了解蒋介石。脆弱点：一旦毛泽东的预判出现偏差，整支军队将陷入无路可走的绝境"
+      },
+      {
+        "from": "c001",
+        "to": "c003",
+        "relation": "被压制的正确意见与错误权威的对抗",
+        "intensity": "high",
+        "description": "李德和博古长期占据决策核心，毛泽东长期被压制。这段关系的转折点是遵义会议——当战场形势彻底证明了李德路线的错误，周恩来、张闻天、王稼祥站出来支持了毛泽东，错误权威的防线在关键时刻崩塌"
+      }
+    ]
+  },
+  "generated_at": 1747267200000,
+  "cdn_synced_at": null
+}
