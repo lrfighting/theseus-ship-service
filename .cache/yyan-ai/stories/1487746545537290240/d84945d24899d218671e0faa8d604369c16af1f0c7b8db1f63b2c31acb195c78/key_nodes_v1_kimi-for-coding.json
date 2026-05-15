@@ -1,0 +1,140 @@
+{
+  "cache_key": "ai_key_nodes_1487746545537290240_d84945d24899d218671e0faa8d604369c16af1f0c7b8db1f63b2c31acb195c78_v1_kimi-for-coding",
+  "work_id": "1487746545537290240",
+  "content_hash": "d84945d24899d218671e0faa8d604369c16af1f0c7b8db1f63b2c31acb195c78",
+  "task_type": "key_nodes",
+  "prompt_version": "v1",
+  "model": "kimi-for-coding",
+  "data": {
+    "work_id": "1487746545537290240",
+    "content_hash": "d84945d24899d218671e0faa8d604369c16af1f0c7b8db1f63b2c31acb195c78",
+    "key_nodes": [
+      {
+        "node_id": "syn_1487746545537290240_32_d84945d2",
+        "title": "她的脚上，穿着一双红",
+        "summary": "这一段可走向不同发展，请结合下文做选择。",
+        "importance": "side",
+        "node_type": "plot_hook",
+        "source": "original",
+        "depth": 0,
+        "parent_branch_id": null,
+        "paragraph_index": 32,
+        "anchor_text": "她的脚上，穿着一双红色的绣花鞋，这种绣花鞋非常老式，现在已经很少能看到了",
+        "quote_hash": "",
+        "confidence": 0.42,
+        "branch_options": [
+          {
+            "option_id": "syn_1487746545537290240_32_d84945d2_fb_1",
+            "text": "主动改写——不再等待，以最直接的方式打破现状，哪怕代价是无法回头",
+            "tone": "冲突升级"
+          },
+          {
+            "option_id": "syn_1487746545537290240_32_d84945d2_fb_2",
+            "text": "承受命运——咽下这一刻，沉默地接受，看命运会把自己带向何处",
+            "tone": "稳健"
+          },
+          {
+            "option_id": "syn_1487746545537290240_32_d84945d2_fb_3",
+            "text": "走第三条路——拒绝非此即彼，在别人都没想到的方向找到出口",
+            "tone": "意外反转"
+          }
+        ]
+      },
+      {
+        "node_id": "syn_1487746545537290240_65_d84945d2",
+        "title": "我焦急地死死攥紧拳头",
+        "summary": "这一段可走向不同发展，请结合下文做选择。",
+        "importance": "side",
+        "node_type": "plot_hook",
+        "source": "original",
+        "depth": 0,
+        "parent_branch_id": null,
+        "paragraph_index": 65,
+        "anchor_text": "我焦急地死死攥紧拳头。",
+        "quote_hash": "",
+        "confidence": 0.42,
+        "branch_options": [
+          {
+            "option_id": "syn_1487746545537290240_65_d84945d2_fb_1",
+            "text": "主动改写——不再等待，以最直接的方式打破现状，哪怕代价是无法回头",
+            "tone": "冲突升级"
+          },
+          {
+            "option_id": "syn_1487746545537290240_65_d84945d2_fb_2",
+            "text": "承受命运——咽下这一刻，沉默地接受，看命运会把自己带向何处",
+            "tone": "稳健"
+          },
+          {
+            "option_id": "syn_1487746545537290240_65_d84945d2_fb_3",
+            "text": "走第三条路——拒绝非此即彼，在别人都没想到的方向找到出口",
+            "tone": "意外反转"
+          }
+        ]
+      },
+      {
+        "node_id": "syn_1487746545537290240_97_d84945d2",
+        "title": "正当我以为那只是一个",
+        "summary": "这一段可走向不同发展，请结合下文做选择。",
+        "importance": "side",
+        "node_type": "plot_hook",
+        "source": "original",
+        "depth": 0,
+        "parent_branch_id": null,
+        "paragraph_index": 97,
+        "anchor_text": "正当我以为那只是一个可怕的噩梦的时候——",
+        "quote_hash": "",
+        "confidence": 0.42,
+        "branch_options": [
+          {
+            "option_id": "syn_1487746545537290240_97_d84945d2_fb_1",
+            "text": "主动改写——不再等待，以最直接的方式打破现状，哪怕代价是无法回头",
+            "tone": "冲突升级"
+          },
+          {
+            "option_id": "syn_1487746545537290240_97_d84945d2_fb_2",
+            "text": "承受命运——咽下这一刻，沉默地接受，看命运会把自己带向何处",
+            "tone": "稳健"
+          },
+          {
+            "option_id": "syn_1487746545537290240_97_d84945d2_fb_3",
+            "text": "走第三条路——拒绝非此即彼，在别人都没想到的方向找到出口",
+            "tone": "意外反转"
+          }
+        ]
+      },
+      {
+        "node_id": "syn_1487746545537290240_162_d84945d2",
+        "title": "「你是谁，你怎么在这",
+        "summary": "这一段可走向不同发展，请结合下文做选择。",
+        "importance": "side",
+        "node_type": "plot_hook",
+        "source": "original",
+        "depth": 0,
+        "parent_branch_id": null,
+        "paragraph_index": 162,
+        "anchor_text": "「你是谁，你怎么在这里？」外婆问出了同样的问题。",
+        "quote_hash": "",
+        "confidence": 0.42,
+        "branch_options": [
+          {
+            "option_id": "syn_1487746545537290240_162_d84945d2_fb_1",
+            "text": "主动改写——不再等待，以最直接的方式打破现状，哪怕代价是无法回头",
+            "tone": "冲突升级"
+          },
+          {
+            "option_id": "syn_1487746545537290240_162_d84945d2_fb_2",
+            "text": "承受命运——咽下这一刻，沉默地接受，看命运会把自己带向何处",
+            "tone": "稳健"
+          },
+          {
+            "option_id": "syn_1487746545537290240_162_d84945d2_fb_3",
+            "text": "走第三条路——拒绝非此即彼，在别人都没想到的方向找到出口",
+            "tone": "意外反转"
+          }
+        ]
+      }
+    ]
+  },
+  "generated_at": 1778841228453,
+  "cdn_synced_at": null
+}

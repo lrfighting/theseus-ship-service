@@ -29,4 +29,6 @@ services:
         value: https://theseus-ship.onrender.com
       - key: LOG_LEVEL
         value: debug
+      - key: ZHIHU_USE_FIXTURE
+        value: "1"
     healthCheckPath: /api/health
